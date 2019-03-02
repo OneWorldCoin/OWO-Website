@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
 import { extractFromQuery } from '../libs/extractFromQuery';
 import { Layout, Hero } from '../components/';
+import { MainContent } from '../theme/components';
 
-const IndexPage = ({ data: dataFromQuery }) => {
-    const data = extractFromQuery(dataFromQuery);
-    const { hero } = data;
+class IndexPage extends Layout {
+    renderContent () {
+        const { data: dataFromQuery } = this.props;
+        const data = extractFromQuery(dataFromQuery);
+        const { hero } = data;
 
-    return (
-        <Layout>
-            <Hero {...hero} />
-        </Layout>
-    );
-};
+        return (
+            <Fragment>
+                <Hero isActive={this.state.showHero} {...hero} />
+                <MainContent isActive={!this.state.showHero}>
+                    Content
+                </MainContent>
+            </Fragment>
+        );
+    }
+}
 
 export default IndexPage;
 
