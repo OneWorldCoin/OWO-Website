@@ -1,5 +1,110 @@
 {
-    "social": {
-        "discord": "https://discord.gg/BhXdPtG"
-    }
+    "navlist": [
+        {
+            "name": "about",
+            "label": "About"
+        },
+        {
+            "name": "team",
+            "label": "Team"
+        },
+        {
+            "name": "coin",
+            "label": "Coin"
+        },
+        {
+            "name": "roadmap",
+            "label": "Roadmap"
+        },
+        {
+            "name": "partners",
+            "label": "Partners"
+        }
+    ],
+    "resources": {
+        "label": "Resources",
+        "categories": [
+            {
+                "label": "Wallet download",
+                "icon": "walletDownload",
+                "items": [
+                    {
+                        "label": "Mac Os",
+                        "icon": "apple",
+                        "url": "http://google.com"
+                    },
+                    {
+                        "label": "Linux",
+                        "icon": "tux",
+                        "url": "http://google.com"
+                    },
+                    {
+                        "label": "Windows",
+                        "icon": "windows",
+                        "url": "http://google.com"
+                    }
+                ]
+            },
+            {
+                "label": "Block explorers",
+                "icon": "search",
+                "items": [
+                    {
+                        "label": "OWO",
+                        "icon": "owo",
+                        "url": "http://google.com"
+                    },
+                    {
+                        "label": "OWO Mobile",
+                        "icon": "owo",
+                        "url": "http://google.com"
+                    }
+                ]
+            },
+            {
+                "label": "Guides",
+                "icon": "book",
+                "items": [
+                    {
+                        "label": "One World Masternode Setup Guide",
+                        "icon": "owo",
+                        "url": "http://google.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "buy": {
+        "label": "Buy OWO",
+        "sellers": [
+            {
+                "name": "crex24",
+                "url": "https://crex24.com/exchange/OWO-BTC",
+                "logo": "static/img/sellers/crex24.svg"
+            },
+            {
+                "name": "midex",
+                "url": "https://en.midex.com/trade/OWO_BTC",
+                "logo": "static/img/sellers/midex.svg"
+            }
+        ]
+    },
+    "social": [
+        {
+            "icon": "twitter",
+            "url": "https://twitter.com"
+        },
+        {
+            "icon": "telegram",
+            "url": "https://telegram.com"
+        },
+        {
+            "icon": "discord",
+            "url": "https://discord.gg/BhXdPtG"
+        },
+        {
+            "icon": "email",
+            "url": "mailto:support@oneworldcoin.io"
+        }
+    ]
 }
