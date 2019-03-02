@@ -11,9 +11,16 @@ const LogoEl = styled.svg`
     ${generateProps};
 `;
 
+const TextLogoEl = styled(LogoEl)``;
+
 LogoEl.defaultProps = {
     primary: true,
     size: '45px 136px',
+};
+
+TextLogoEl.defaultProps = {
+    primary: true,
+    size: '22px auto',
 };
 
 const Logo = props => (
@@ -26,5 +33,18 @@ const Logo = props => (
     </LogoEl>
 );
 
-export default Logo;
+const TextLogo = props => (
+    <TextLogoEl
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 79.2 21.3"
+        {...props}
+    >
+      <path d="M22.4 13.6c.1-4.1 3.4-7.3 7.4-7.3h.1c4-.1 7.4 3 7.5 7v.2c-.1 4.1-3.4 7.3-7.4 7.3h-.1c-4 .1-7.4-3-7.5-7v-.2zm4.7-.1c-.1 1.7 1.2 3.1 2.8 3.2h.1c1.6 0 2.9-1.4 2.9-3v-.1c.1-1.6-1.2-3-2.8-3.1H30c-1.6 0-2.9 1.4-2.9 3zm-13 7.1l-2.4-6.9-2.4 6.9h-4L.8 6.6h4.9l2 6.7 2.2-6.7h4l2.2 6.7 2-6.7h4.8l-4.5 14h-4.3zm51-.1V6.6h5.3c5.5 0 8.3 2.7 8.3 6.8s-2.8 7-8.4 7l-5.2.1zm4.6-4h.8c2.1 0 3.5-.9 3.5-2.9s-1.4-2.9-3.5-2.9h-.8v5.8zm-16.7 4V6.6h4.6v9.9h6.5v4H53zm-6 0l-2.6-4h-1v4h-4.6V6.6h6.8c2.5 0 4 .6 5 1.6.9.9 1.3 2.1 1.3 3.3 0 1.8-1 3.5-2.7 4.2l3.2 4.7-5.4.1zm-3.6-7.2h2c1.1 0 1.8-.5 1.8-1.4 0-.9-.7-1.3-1.8-1.3h-2v2.7zM14.5 4.7V.5h4.4v1.1h-3.1V2h2.7v.9h-2.7v.7h3.1v1.1h-4.4zm-2.9 0l-2.2-3v3H8.1V.5h2l2.3 3v-3h1.2v4.2h-2zm-7.4 0c-1.2 0-2.1-.9-2.1-2.1C2.1 1.4 3 .5 4.2.5h1.3c1.2 0 2.1.9 2.1 2.1 0 1.2-.9 2.1-2.1 2.1H4.2zm-.8-2.1c0 .6.4 1 1 1h.9c.6 0 1-.4 1-1s-.4-1-1-1h-.9c-.5 0-1 .4-1 1z"/>
+    </TextLogoEl>
+);
+
+export {
+    Logo,
+    TextLogo,
+};
 
