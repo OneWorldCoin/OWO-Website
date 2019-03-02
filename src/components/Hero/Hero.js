@@ -2,31 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { size } from 'polished';
+import { transitions } from 'styled-gen';
 
 import Hemisphere from '../Hemisphere/Hemisphere';
 import Stars from '../Stars/Stars';
 import MobileDevice from '../MobileDevice/MobileDevice';
 
-import { Section, Grid, Row, Col, H2, Text, Div } from '../../theme/components';
+import { Section, Grid, Logo, Row, Col, H2, Text, Div } from '../../theme/components';
 
 const HeroWrapper = styled(Section).attrs({
     as: 'header',
 })`
     ${size('100vh', '100vw')};
+    ${transitions('transform', 1000, 'outExpo')};
 
-    position: relative;
+    position: absolute;
+    top: 0;
     overflow: hidden;
+    z-index: 999;
+
+    transform: ${props => props.isActive ? 'translateY(0)' : 'translateY(-100vh)'};
 `;
 
 const Hero = props => {
-    const { header, intro } = props;
+    const { header, isActive, intro } = props;
 
     return (
-        <HeroWrapper>
+        <HeroWrapper isActive={isActive}>
             <Stars />
             <Grid>
-                <Row pt={{xs: 8, sm: 11}}>
-                    <Col xs={12} sm={7}>
+                <Row pt={{xs: 3.5, sm: 7.5}}>
+                    <Col xs={12}>
+                        <Logo white />
+                    </Col>
+                </Row>
+                <Row pt={{xs: 1}}>
+                    <Col xs={3.5} sm={7}>
                         <H2
                             fontSize={{xs: 36, sm: 62}}
                             mt={{sm: 5.625}}
