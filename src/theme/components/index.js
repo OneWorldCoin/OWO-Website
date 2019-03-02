@@ -1,7 +1,9 @@
 import GlobalStyle from './GlobalStyle/GlobalStyle';
 
+import A from './A/A';
 import Div from './Div/Div';
 import Icon from './Icon/Icon';
+import IconLink from './IconLink/IconLink';
 import MainContent from './MainContent/MainContent';
 import Section from './Section/Section';
 import Text from './Text/Text';
@@ -13,6 +15,7 @@ import { Logo, TextLogo } from './Logo/Logo';
 export {
     GlobalStyle,
 
+    A,
     Col,
     Div,
     Grid,
@@ -23,6 +26,7 @@ export {
     H5,
     H6,
     Icon,
+    IconLink,
     Logo,
     MainContent,
     Section,
