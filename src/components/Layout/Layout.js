@@ -24,7 +24,7 @@ class Layout extends Component {
     };
 
     state = {
-        showHero: false,
+        showHero: true,
     }
 
     componentDidMount() {
