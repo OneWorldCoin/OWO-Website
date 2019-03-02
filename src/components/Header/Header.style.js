@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { rgba, size } from 'polished';
 import { colors } from '../../theme';
+import { Div } from '../../theme/components';
 
 const HeaderWrapper = styled.header`
     background-color: ${colors.white};
@@ -19,7 +20,13 @@ const HeaderContent = styled.div`
     justify-content: space-between;
 `;
 
+const HeaderAside = styled(Div)`
+    display: flex;
+    align-items: center;
+`;
+
 export {
     HeaderWrapper,
     HeaderContent,
+    HeaderAside,
 };

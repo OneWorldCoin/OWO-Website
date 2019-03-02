@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { TextLogo, Grid, Row, Col } from '../../theme/components';
+import { TextLogo, Grid, Row, Col, IconLink } from '../../theme/components';
+
+import Buyers from './Buyers';
+import Navlist from './Navlist';
+import Resources from './Resources';
 
 import {
     HeaderWrapper,
     HeaderContent,
+    HeaderAside,
 } from './Header.style';
 
 export default class Header extends Component {
@@ -13,15 +18,26 @@ export default class Header extends Component {
         return(
             <StaticQuery
                 query={HEADER_QUERY}
-                render={({header: { child: { navlist, resources, buy } }}) => (
+                render={({header: { child: { navlist, resources, github, buy } }}) => (
                     <HeaderWrapper>
                         <Grid>
                             <Row>
                                 <Col xs={12}>
                                     <HeaderContent>
-                                        {console.log(navlist, resources, buy)}
                                         <TextLogo />
-                                        <header>woot!</header>
+                                        <HeaderAside>
+                                            <Navlist items={navlist} />
+                                            <Resources {...resources} />
+                                            <Buyers {...buy} />
+                                            <IconLink
+                                                color="black"
+                                                ml={1}
+                                                icon="github"
+                                                href={github}
+                                                target="_blank"
+                                                rel="noopener"
+                                            />
+                                        </HeaderAside>
                                     </HeaderContent>
                                 </Col>
                             </Row>
@@ -64,6 +80,7 @@ const HEADER_QUERY = graphql`
                         logo
                     }
                 }
+                github
             }
         }
     }
