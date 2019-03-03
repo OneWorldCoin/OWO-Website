@@ -44,7 +44,7 @@
                 "position": "Founder",
                 "photo": "/img/team/bar.png",
                 "social": {
-                    "twitter": false,
+                    "twitter": "",
                     "linkedin": "http://linkedin.com"
                 }
             },
