@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 import theme from '../../theme';
-import { Header } from '../../components';
+import { Header, Footer } from '../../components';
 import { GlobalStyle } from '../../theme/components';
 
 // const favicons = [
@@ -107,6 +107,7 @@ class Layout extends Component {
                             </Helmet>
                             <Header />
                             {this.renderContent()}
+                            <Footer />
                         </>
                     )}
                 />
