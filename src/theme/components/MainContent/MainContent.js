@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { generateProps, transitions } from 'styled-gen';
 
-const MainContent = styled.div`
+const MainContent = styled.main`
     ${transitions('transform', 1000, 'outExpo')};
 
     display: flex;
