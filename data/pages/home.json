@@ -2,5 +2,201 @@
     "hero": {
         "header": "Masternodes and Staking go Mobile",
         "intro": "Innovation in the Masternode space taking it to a whole New Level"
+    },
+    "about": {
+        "header": "About",
+        "text": [
+            "The creators of CryptoFlow, the near instant Fiat to Crypto transfers payment platform, are delighted to introduce you to the One World project.",
+            "One World is a new and innovative project keeping with the initial CryptoFlow Mantra of making Crypto more accessible for everyone."
+        ],
+        "img": {
+            "src": "/img/illustrations/phone-wallet.svg",
+            "alt": ""
+        },
+        "button": {
+            "label": "WhitePaper",
+            "icon": "newspaper",
+            "url": "/docs/whitepaper.pdf"
+        }
+    },
+    "features": [
+        {
+            "title": "Wallet Transactions",
+            "text": "Send, Receive and View all transactions",
+            "icon": "/img/illustrations/icon-wallet.svg"
+        },
+        {
+            "title": "Coin Staking",
+            "text": "In a first for POS coins you can now Stake any coin signed up with us directly from the APP",
+            "icon": "/img/illustrations/icon-coin.svg"
+        },
+        {
+            "title": "Masternodes Ops",
+            "text": "Setup, view and also control all your Masternodes also from the APP",
+            "icon": "/img/illustrations/cpu.svg"
+        }
+    ],
+    "team": {
+        "header": "Team",
+        "members": [
+            {
+                "name": "Barry Doyle",
+                "position": "Founder",
+                "photo": "/img/team/bar.png",
+                "social": {
+                    "twitter": false,
+                    "linkedin": "http://linkedin.com"
+                }
+            },
+            {
+                "name": "Pedro Logo",
+                "position": "Administrator",
+                "photo": "/img/team/lobo.png",
+                "social": {
+                    "twitter": "http://twitter.com",
+                    "linkedin": "http://linkedin.com"
+                }
+            },
+            {
+                "name": "John Movalis",
+                "position": "Operations Manager",
+                "photo": "/img/team/movalis.png",
+                "social": {
+                    "twitter": false,
+                    "linkedin": false
+                }
+            },
+            {
+                "name": "Patrick Tompkins",
+                "position": "Advisor",
+                "photo": "/img/team/patrick.png",
+                "social": {
+                    "twitter": false,
+                    "linkedin": false
+                }
+            },
+            {
+                "name": "Aleš Kalan",
+                "position": "Bot Manager",
+                "photo": "/img/team/ales.png",
+                "social": {
+                    "twitter": false,
+                    "linkedin": "http://linkedin.com"
+                }
+            }
+        ]
+    },
+    "coin": {
+        "header": "Coin specs",
+        "specs": [
+            {
+                "label": "Ticker",
+                "text": "OWO"
+            },
+            {
+                "label": "Algorithm",
+                "text": "QUARK"
+            },
+            {
+                "label": "Max supply",
+                "text": "500,000,000"
+            },
+            {
+                "label": "Reward rate",
+                "text": "MN 80% / POS 20%"
+            },
+            {
+                "label": "Min Collateral",
+                "text": "100,000 OWO"
+            },
+            {
+                "label": "Block timer",
+                "text": "60 sec"
+            },
+            {
+                "label": "Min stake age",
+                "text": "1 hour"
+            }
+        ],
+        "img": {
+            "src": "/img/illustrations/coin.svg",
+            "alt": ""
+        },
+        "button": {
+            "label": "Rewards"
+        }
+    },
+    "roadmap": {
+        "header": "Roadmap",
+        "items": [
+            {
+                "date": "Quarter 1 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 2 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 3 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "AGO 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "DEC 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 1 2020",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            }
+        ]
+    },
+    "partners": {
+        "header": "Partners",
+        "items": [
+            {
+                "logo": "partner1.svg",
+                "url": false
+            },
+            {
+                "logo": "partner2.svg",
+                "url": "https://google.com"
+            },
+            {
+                "logo": "partner3.svg",
+                "url": false
+            },
+            {
+                "logo": "partner4.svg",
+                "url": "https://google.com"
+            },
+            {
+                "logo": "partner5.svg",
+                "url": false
+            },
+            {
+                "logo": "partner6.svg",
+                "url": false
+            }
+        ]
+    },
+    "subscribe": {
+        "header": "Be Aware!",
+        "text": "Subscribe to know when One World app will be live...",
+        "input": {
+            "placeholder": "Your email",
+            "label": "Subscribe"
+        },
+        "thankyouMessage": "Thanks for subscribing. ;)"
     }
 }
