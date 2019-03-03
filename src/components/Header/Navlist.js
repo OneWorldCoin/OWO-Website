@@ -31,11 +31,7 @@ const NavlistLink = ({name, label}) => (
     </NavlistLinkContent>
 );
 
-const Navlist = ({ items }) => {
-    /* eslint-disable-next-line */
-    console.log(items);
-    return items.map((item, i) => <NavlistLink key={i} {...item} />);
-};
+const Navlist = ({ items }) => items.map((item, i) => <NavlistLink key={i} {...item} />);
 
 Navlist.propTypes = {
     items: PropTypes.arrayOf(
