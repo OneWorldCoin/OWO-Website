@@ -12,9 +12,7 @@ const colors = {
     deepBlack: '#222222',
     white: '#ffffff',
 
-    grays: {
-        lighter: '#f8f8f8',
-    },
+    lighterGrey: '#f8f8f8',
 };
 
 export default colors;
