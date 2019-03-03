@@ -5,6 +5,7 @@ import { transitions } from 'styled-gen';
 
 import { getColor } from '../../theme/helpers/getColor';
 import { colors } from '../../theme';
+import { Button } from '../../theme/components';
 
 const SellerLinkEl = styled.a`
     ${transitions('background-color', 250, 'outCubic')};
@@ -45,7 +46,12 @@ const Sellers = ({ label, sellers}) => {
         <Popover
             content={sellers.map(({ name, ...other }) => <SellerLink key={name} {...other} />)}
         >
-            {label}
+            <Button
+                ml={1}
+                label={label}
+                small
+                withCaret
+            />
         </Popover>
     );
 };
