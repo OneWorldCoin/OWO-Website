@@ -3,7 +3,7 @@ import { rgba, size } from 'polished';
 import { colors } from '../../theme';
 import { Div } from '../../theme/components';
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.nav`
     background-color: ${colors.white};
     box-shadow: 0 0 20px ${rgba(colors.black, .1)};
     display: block;
