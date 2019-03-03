@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { size } from 'polished';
-import { variations } from 'styled-gen';
+import { variations, mq, transitions } from 'styled-gen';
 
 import A from '../A/A';
 
@@ -14,14 +14,29 @@ const sizeVariations = {
     `,
 };
 
+const Link = styled(A).attrs({
+    withoutHoverEffect: true,
+})`
+    ${mq.tabletLandscape(css`
+        &:hover {
+            svg {
+                transform: scale(1.5);
+            }
+        }
+        svg {
+            ${transitions('all', 'hover', 'inOutBack')};
+        }
+    `)}
+`;
+
 const Icon = styled(DefaultIcon)`
     ${variations(sizeVariations)};
 `;
 
 const IconLink = ({ icon, size, ...other }) => (
-    <A {...other}>
+    <Link {...other}>
         <Icon icon={icon} size={size} fluid/>
-    </A>
+    </Link>
 );
 
 IconLink.propTypes = {

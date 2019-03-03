@@ -10,7 +10,7 @@ const colorVariations = {
         color: ${props => !props.color && colors.primary};
 
         &:hover {
-            ${props => !props.disabled && !props.active && css`
+            ${props => !props.withoutHoverEffect && !props.disabled && !props.active && css`
                 color: ${props => getColor(props.color, { darken: 0.2 })};
             `}
         }
