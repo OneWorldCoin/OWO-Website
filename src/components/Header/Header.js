@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { TextLogo, Grid, Row, Col, IconLink } from '../../theme/components';
 
-import Buyers from './Buyers';
+import Sellers from './Sellers';
 import Navlist from './Navlist';
 import Resources from './Resources';
 
@@ -28,7 +28,7 @@ export default class Header extends Component {
                                         <HeaderAside>
                                             <Navlist items={navlist} />
                                             <Resources {...resources} />
-                                            <Buyers {...buy} />
+                                            <Sellers {...buy} />
                                             <IconLink
                                                 color="black"
                                                 ml={1}
