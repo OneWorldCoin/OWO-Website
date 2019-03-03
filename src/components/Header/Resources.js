@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popover } from '../';
 
-import { Icon } from '../../theme/components';
+import { Icon, Button } from '../../theme/components';
 
 import {
     ResourcesCategoriesList,
@@ -47,7 +47,15 @@ const Resources = ({ categories, label }) => {
                 </ResourcesCategoriesList>
             )}
         >
-            {label}
+            <Button
+                color="black"
+                label={label}
+                lined
+                small
+                withCaret
+                ml={1}
+                display={{xs: 'none', sm: 'inline-flex'}}
+            />
         </Popover>
     );
 };
