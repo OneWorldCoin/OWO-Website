@@ -5,14 +5,14 @@ import { transitions } from 'styled-gen';
 import { colors } from '../../theme';
 
 const PopoverContainerWrapper = styled.div`
-    ${props => transitions('all', props.animationDuration, 'outCirc')};
+    ${props => transitions('all', props.animationDuration, 'inOutCirc')};
     ${position('absolute')};
 
     align-self: flex-end;
     border-radius: 12px;
     background-color: ${props => props.alternative ? colors.black : colors.primary};
     box-shadow: 0 0 20px ${rgba(colors.black, .16)};
-    margin-top: 4px;
+    margin-top: 8px;
     opacity: 0;
     top: 100%;
     transform: translateY(20px);
