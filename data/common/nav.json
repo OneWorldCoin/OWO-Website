@@ -80,12 +80,12 @@
             {
                 "name": "crex24",
                 "url": "https://crex24.com/exchange/OWO-BTC",
-                "logo": "static/img/sellers/crex24.svg"
+                "logo": "/img/sellers/crex24.svg"
             },
             {
                 "name": "midex",
                 "url": "https://en.midex.com/trade/OWO_BTC",
-                "logo": "static/img/sellers/midex.svg"
+                "logo": "/img/sellers/midex.svg"
             }
         ]
     },
