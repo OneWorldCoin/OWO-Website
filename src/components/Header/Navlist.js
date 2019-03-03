@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as ScrollLink } from 'react-scroll';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { fonts, colors } from '../../theme';
+import { mq } from 'styled-gen';
 
 const NavlistLinkContent = styled(ScrollLink)`
     font-weight: ${fonts.weights.medium};
     font-size: ${fonts.size('sm')};
     color: ${colors.black};
+    display: none;
+
+    ${mq.tabletLandscape(css`
+        display: block;
+    `)};
 
     &.active {
         color: ${colors.primary};
