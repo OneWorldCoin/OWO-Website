@@ -53,7 +53,7 @@ const Resources = ({ categories, label }) => {
                 lined
                 small
                 withCaret
-                ml={1}
+                ml={1.5}
                 display={{xs: 'none', sm: 'inline-flex'}}
             />
         </Popover>
