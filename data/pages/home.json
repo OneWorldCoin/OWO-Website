@@ -62,8 +62,8 @@
                 "position": "Operations Manager",
                 "photo": "/img/team/movalis.png",
                 "social": {
-                    "twitter": false,
-                    "linkedin": false
+                    "twitter": "",
+                    "linkedin": ""
                 }
             },
             {
@@ -71,8 +71,8 @@
                 "position": "Advisor",
                 "photo": "/img/team/patrick.png",
                 "social": {
-                    "twitter": false,
-                    "linkedin": false
+                    "twitter": "",
+                    "linkedin": ""
                 }
             },
             {
@@ -80,7 +80,7 @@
                 "position": "Bot Manager",
                 "photo": "/img/team/ales.png",
                 "social": {
-                    "twitter": false,
+                    "twitter": "",
                     "linkedin": "http://linkedin.com"
                 }
             }
@@ -166,7 +166,7 @@
         "items": [
             {
                 "logo": "partner1.svg",
-                "url": false
+                "url": ""
             },
             {
                 "logo": "partner2.svg",
@@ -174,7 +174,7 @@
             },
             {
                 "logo": "partner3.svg",
-                "url": false
+                "url": ""
             },
             {
                 "logo": "partner4.svg",
@@ -182,11 +182,11 @@
             },
             {
                 "logo": "partner5.svg",
-                "url": false
+                "url": ""
             },
             {
                 "logo": "partner6.svg",
-                "url": false
+                "url": ""
             }
         ]
     },
