@@ -19,6 +19,11 @@ const SectionContent = styled.div`
     ${generateProps};
 `;
 
+SectionContent.defaultProps = {
+    pb: {xs: 4.5, md: 9},
+    pt: {xs: 4.5, md: 9},
+};
+
 const SvgEl = styled.svg`
     width: 100%;
 
