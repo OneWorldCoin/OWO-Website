@@ -27,8 +27,8 @@ export default class Header extends Component {
                                         <TextLogo />
                                         <HeaderAside>
                                             <Navlist items={navlist} />
-                                            <Resources {...resources} />
                                             <Sellers {...buy} />
+                                            <Resources {...resources} />
                                             <IconLink
                                                 color="black"
                                                 ml={1}
