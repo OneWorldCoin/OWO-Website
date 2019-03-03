@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { extractFromQuery } from '../libs/extractFromQuery';
 import { Layout, Hero } from '../components/';
-import { MainContent } from '../theme/components';
+import { MainContent, Div, Section, H3 } from '../theme/components';
 
 class IndexPage extends Layout {
     renderContent () {
@@ -15,7 +15,21 @@ class IndexPage extends Layout {
             <Fragment>
                 <Hero isActive={this.state.showHero} {...hero} />
                 <MainContent isActive={!this.state.showHero}>
-                    Content
+                    <Section name={'about'} noCurve>
+                        <Div mt={10} size={'200 null'}>
+                            <H3 withLine>About</H3>
+                        </Div>
+                    </Section>
+                    <Section name={'team'} noCurve>
+                        <Div size={'200 null'}>
+                            team
+                        </Div>
+                    </Section>
+                    <Section name={'coin'} noCurve>
+                        <Div size={'200 null'}>
+                            coin
+                        </Div>
+                    </Section>
                 </MainContent>
             </Fragment>
         );

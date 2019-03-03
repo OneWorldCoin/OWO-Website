@@ -2,11 +2,28 @@ import styled, { css } from 'styled-components';
 import { mq, generateProps } from 'styled-gen';
 
 import { fonts, colors } from '../../';
+import { size, rgba } from 'polished';
 
 const Headers = styled.span`
     color: ${colors.primary};
     font-weight: ${fonts.weights.black};
     line-height: 1.1;
+
+    &::after {
+        ${props => props.withLine && css`
+            ${size(2, 50)};
+
+            background-color: ${rgba(colors.grey, .5)};
+            content: '';
+            display: block;
+            margin-top: 0.33em;
+
+            ${props => props.center && css`
+                margin-left: auto;
+                margin-right: auto;
+            `}
+        `};
+    }
 `;
 
 const H6 = styled(Headers.withComponent('h6'))`
