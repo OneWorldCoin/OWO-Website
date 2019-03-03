@@ -60,8 +60,4 @@ Icon.propTypes = {
     icon: PropType.string,
 };
 
-Icon.defaultProps = {
-    size: 1,
-};
-
 export default Icon;
