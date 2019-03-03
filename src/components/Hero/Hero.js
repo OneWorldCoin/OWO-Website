@@ -8,9 +8,9 @@ import Hemisphere from '../Hemisphere/Hemisphere';
 import Stars from '../Stars/Stars';
 import MobileDevice from '../MobileDevice/MobileDevice';
 
-import { Section, Grid, Logo, Row, Col, H2, Text, Div } from '../../theme/components';
+import { Grid, Logo, Row, Col, H2, Text, Div } from '../../theme/components';
 
-const HeroWrapper = styled(Section).attrs({
+const HeroWrapper = styled(Div).attrs({
     as: 'header',
 })`
     ${size('100vh', '100vw')};
