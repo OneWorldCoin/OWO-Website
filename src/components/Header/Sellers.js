@@ -47,7 +47,7 @@ const Sellers = ({ label, sellers}) => {
             content={sellers.map(({ name, ...other }) => <SellerLink key={name} {...other} />)}
         >
             <Button
-                ml={1}
+                ml={1.5}
                 label={label}
                 small
                 withCaret
