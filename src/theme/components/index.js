@@ -1,6 +1,7 @@
 import GlobalStyle from './GlobalStyle/GlobalStyle';
 
 import A from './A/A';
+import Button from './Button/Button';
 import Div from './Div/Div';
 import Icon from './Icon/Icon';
 import IconLink from './IconLink/IconLink';
@@ -16,6 +17,7 @@ export {
     GlobalStyle,
 
     A,
+    Button,
     Col,
     Div,
     Grid,
