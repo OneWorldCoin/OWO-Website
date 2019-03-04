@@ -128,6 +128,7 @@ const Button = ({ children, label, href, icon, leftIcon, withCaret, ...other}) =
             as={href ? 'a' : 'button'}
             leftIcon={!!leftIcon}
             icon={!!icon}
+            href={href}
             {...other}
         >
             {!!leftIcon && <IconWrapper className="icon icon-before" {...other}><Icon icon={leftIcon} /></IconWrapper>}
