@@ -19,7 +19,8 @@ export const About = ({ button, header, img, text }) => {
                         <H3
                             withLine
                             mb={{xs: 2, md: 4}}
-                        >{header}
+                        >
+                            {header}
                         </H3>
 
                         {/* text */}
