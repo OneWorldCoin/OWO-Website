@@ -3,6 +3,7 @@ import { generateProps, variations } from 'styled-gen';
 import { rgba } from 'polished';
 
 import { colors } from '../..';
+import fonts from '../../variables/fonts';
 
 const formatVariations = {
     default: css`
@@ -10,6 +11,13 @@ const formatVariations = {
     `,
     body: css`
         color: ${rgba(colors.black, .7)};
+    `,
+    note: css`
+        color: ${rgba(colors.black, .7)};
+        font-size: ${fonts.size('xxs')};
+        font-weight: ${fonts.weights.bold};
+        letter-spacing: 1px;
+        text-transform: uppercase;
     `,
 };
 
