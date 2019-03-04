@@ -1,12 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { rgba, size } from 'polished';
+import styled, { css, keyframes } from 'styled-components';
+import { rgba, size, position } from 'polished';
 import { variations, transitions, generateProps } from 'styled-gen';
 
 import { colors, fonts } from '../..';
 import { Icon } from '../';
 import { getColor } from '../../helpers/getColor';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const IconWrapper = styled.span`
     ${props => props.iconHighlight && !props.lined && css`
@@ -29,7 +39,7 @@ const colorVariations = {
         color: ${props => props.color ? props.color : colors.white};
         background-color: ${props => !props.lined ? props.bgColor ? props.bgColor : colors.primary : 'transparent'};
 
-        ${props => !props.lined && css`
+        ${props => !props.lined && !props.noShadow && css`
             ${props.overBlack ? css`
                 box-shadow: 0 0 20px ${rgba('black', 1)};
             `: css`
@@ -38,11 +48,16 @@ const colorVariations = {
         `};
 
         &:hover {
-            ${props => !props.disabled && !props.active && css`
+            ${props => !props.loading && !props.loading && !props.disabled && !props.active && css`
                 background-color: ${props => getColor(props.lined ? props.color || colors.primary : props.bgColor || colors.primary, { darken: 0.1 })};
                 color: ${props => props.lined && colors.white};
             `}
         }
+    `,
+
+    disabled: css`
+        background-color: ${colors.lightGrey};
+        color: ${rgba(colors.black, .15)};
     `,
 };
 
@@ -78,6 +93,13 @@ const sizeVariations = {
         font-size: ${fonts.size('xs')};
         height: 26px;
         padding: 0 16px;
+    `,
+
+    large: css`
+        border-radius: 24px;
+        font-size: ${fonts.size('xs')};
+        height: 48px;
+        padding: 0 32px;
     `,
 };
 
@@ -117,7 +139,7 @@ const ButtonEl = styled.button`
         line-height: 1;
     }
 
-    ${props => !props.active && !props.disabled && css`
+    ${props => !props.active && !props.disabled && !props.loading && css`
         cursor: pointer;
     `}
 
@@ -127,7 +149,35 @@ const ButtonEl = styled.button`
     ${generateProps};
 `;
 
-const Button = ({ children, label, href, icon, leftIcon, withCaret, ...other}) => {
+const ButtonContent = styled.div`
+    ${transitions(['opacity', 'visibility'], 250, 'outCubic')};
+
+    opacity: ${props => props.isActive ? 1 : 0};
+    visibility: ${props => props.isActive ? 1 : 0};
+`;
+
+const Spinner = styled.div`
+    ${transitions(['opacity', 'visibility'], 250, 'outCubic')};
+    ${position('absolute', 0)};
+
+    opacity: ${props => props.isActive ? 1 : 0};
+    visibility: ${props => props.isActive ? 1 : 0};
+    display: flex;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        height: 50%;
+        width: auto;
+    }
+
+    ${props => props.isActive && css`
+        animation: ${rotate} .5s linear infinite;
+    `};
+`;
+
+const Button = ({ children, label, href, icon, leftIcon, loading, withCaret, ...other}) => {
     return (
         <ButtonEl
             as={href ? 'a' : 'button'}
@@ -137,12 +187,15 @@ const Button = ({ children, label, href, icon, leftIcon, withCaret, ...other}) =
             {...other}
         >
             {!!leftIcon && <IconWrapper className="icon icon-before" {...other}><Icon icon={leftIcon} /></IconWrapper>}
-            <span>
+            <ButtonContent isActive={!loading}>
                 {!!label && label}
                 {children}
-            </span>
-            {withCaret && <Icon className="caret" icon="caretDown" size={.5} ml={.5} />}
+                {withCaret && <Icon className="caret" icon="caretDown" size={.5} ml={.5} />}
+            </ButtonContent>
             {!!icon && <IconWrapper className="icon icon-after" {...other}><Icon icon={icon} /></IconWrapper>}
+            <Spinner isActive={loading}>
+                <Icon icon="spinner" />
+            </Spinner>
         </ButtonEl>
     );
 };
@@ -153,6 +206,8 @@ Button.propTypes = {
     icon: PropTypes.string,
     label: PropTypes.string,
     leftIcon: PropTypes.string,
+    loading: PropTypes.bool,
+    noShadow: PropTypes.bool,
     withCaret: PropTypes.bool,
 };
 

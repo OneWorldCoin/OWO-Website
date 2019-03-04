@@ -203,6 +203,6 @@
             "placeholder": "Your email",
             "label": "Subscribe"
         },
-        "thankyouMessage": "Thanks for subscribing. ;)"
+        "thankyouMessage": "Thank you!"
     }
 }

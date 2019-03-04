@@ -29,14 +29,21 @@ class Layout extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-        this.handleScroll();
+        document.body.classList.add('no-scroll');
+        window.addEventListener('mousewheel', this.handleMouseWeel, false);
     }
 
-    handleScroll = () => {
-        window.scrollY > 0
-        && this.state.showHero
-        && this.setState({ showHero: false }, () => window.removeEventListener('scroll', this.handleScroll));
+    handleMouseWeel = e => {
+        const scrollingDown = e.deltaY > 0;
+
+        scrollingDown
+            && this.setState({ showHero: false }, () => {
+                window.removeEventListener('mousewheel', this.handleMouseWeel);
+                setTimeout(() => {
+                    document.body.classList.remove('no-scroll');
+                }, 700);
+            })
+        ;
     }
 
     render() {

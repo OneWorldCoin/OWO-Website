@@ -6,6 +6,7 @@ import MobileDevice from './MobileDevice/MobileDevice';
 import Member from './Member/Member';
 import Popover from './Popover/Popover';
 import SEO from './SEO/SEO';
+import Subscribe from './Subscribe/Subscribe';
 
 
 export {
@@ -17,4 +18,5 @@ export {
     Member,
     Popover,
     SEO,
+    Subscribe,
 };

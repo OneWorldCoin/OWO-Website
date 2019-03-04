@@ -25,7 +25,7 @@ export default class Popover extends Component {
 
     static defaultProps = {
         alternative: false,
-        animationDuration: 500,
+        animationDuration: 750,
         onOpened: () => {},
         onClosed: () => {},
     }

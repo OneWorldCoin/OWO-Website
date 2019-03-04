@@ -14,7 +14,7 @@ const HeroWrapper = styled(Div).attrs({
     as: 'header',
 })`
     ${size('100vh', '100vw')};
-    ${transitions('transform', 1000, 'outExpo')};
+    ${transitions('transform', 750, 'inOutCirc')};
 
     position: absolute;
     top: 0;
