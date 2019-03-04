@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { mq } from 'styled-gen';
 
 import { Col, Grid, H3, Row, Section } from '../../theme/components';
 import { Member } from '../../components';
@@ -9,8 +10,11 @@ const TeamWrapper = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
+
+    ${mq.tabletLandscape(css`
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
+    `)}
 `;
 
 export const Team = ({ header, members }) => {
