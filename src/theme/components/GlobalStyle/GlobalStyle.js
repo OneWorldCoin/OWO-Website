@@ -20,13 +20,14 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.4;
         overflow-x: hidden;
         font-family: ${({theme}) => theme.fonts.families.sans};
-        overflow-y: auto;
+        overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
 
         * {
             box-sizing: border-box;
         }
-        &.loading {
+        &.loading,
+        &.no-scroll {
             overflow-y: hidden;
         }
     }
