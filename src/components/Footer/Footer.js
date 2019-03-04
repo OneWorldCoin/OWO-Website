@@ -21,7 +21,7 @@ export default class Footer extends Component {
                                 {social.map(({icon, url}, i) => (
                                     <IconLink
                                         key={i}
-                                        ml={i > 0 && 2}
+                                        ml={i > 0 ? 2 : 0}
                                         icon={icon}
                                         href={url}
                                         target="_blank"

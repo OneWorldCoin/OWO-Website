@@ -5,6 +5,7 @@ import Button from './Button/Button';
 import Div from './Div/Div';
 import Icon from './Icon/Icon';
 import IconLink from './IconLink/IconLink';
+import Img from './Img/Img';
 import MainContent from './MainContent/MainContent';
 import Section from './Section/Section';
 import Text from './Text/Text';
@@ -29,6 +30,7 @@ export {
     H6,
     Icon,
     IconLink,
+    Img,
     Logo,
     MainContent,
     Section,
