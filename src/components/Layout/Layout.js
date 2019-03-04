@@ -33,15 +33,10 @@ class Layout extends Component {
         this.handleScroll();
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-
     handleScroll = () => {
-        window.scrollY > 1
-            ? this.state.showHero && this.setState({ showHero: false })
-            : !this.state.showHero && this.setState({ showHero: true })
-        ;
+        window.scrollY > 0
+        && this.state.showHero
+        && this.setState({ showHero: false }, () => window.removeEventListener('scroll', this.handleScroll));
     }
 
     render() {
