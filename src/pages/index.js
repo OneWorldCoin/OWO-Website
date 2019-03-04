@@ -10,13 +10,14 @@ import {
     Features,
     Team,
     Coin,
+    Partners,
 } from '../sections';
 
 class IndexPage extends Layout {
     renderContent () {
         const { data: dataFromQuery } = this.props;
         const data = extractFromQuery(dataFromQuery);
-        const { about, hero, features, team, coin } = data;
+        const { about, hero, features, team, coin, partners } = data;
 
         return (
             <Fragment>
@@ -32,6 +33,8 @@ class IndexPage extends Layout {
                     <Team {...team} />
 
                     <Coin {...coin} />
+
+                    <Partners {...partners} />
 
                 </MainContent>
             </Fragment>
@@ -105,6 +108,7 @@ export const query = graphql`
                     header
                     items {
                         logo
+                        name
                         url
                     }
                 }

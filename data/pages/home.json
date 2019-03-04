@@ -165,27 +165,33 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "partner1.svg",
+                "logo": "/img/partners/partner1.svg",
+                "name": "",
                 "url": ""
             },
             {
-                "logo": "partner2.svg",
+                "logo": "/img/partners/partner2.svg",
+                "name": "",
                 "url": "https://google.com"
             },
             {
-                "logo": "partner3.svg",
+                "logo": "/img/partners/partner3.svg",
+                "name": "",
                 "url": ""
             },
             {
-                "logo": "partner4.svg",
+                "logo": "/img/partners/partner4.svg",
+                "name": "",
                 "url": "https://google.com"
             },
             {
-                "logo": "partner5.svg",
+                "logo": "/img/partners/partner5.svg",
+                "name": "",
                 "url": ""
             },
             {
-                "logo": "partner6.svg",
+                "logo": "/img/partners/partner6.svg",
+                "name": "",
                 "url": ""
             }
         ]
