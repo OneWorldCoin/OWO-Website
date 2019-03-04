@@ -5,7 +5,7 @@ import { transitions } from 'styled-gen';
 import { colors } from '../../theme';
 
 const PopoverContainerWrapper = styled.div`
-    ${props => transitions('all', props.animationDuration, 'inOutCirc')};
+    ${props => transitions('all', props.animationDuration, 'outCirc')};
     ${position('absolute')};
 
     align-self: flex-end;
@@ -15,7 +15,7 @@ const PopoverContainerWrapper = styled.div`
     margin-top: 8px;
     opacity: 0;
     top: 100%;
-    transform: translateY(20px);
+    transform: translateY(50px);
     visibility: hidden;
 
     ${props => props.isActive && css`
