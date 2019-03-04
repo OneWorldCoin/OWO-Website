@@ -20,6 +20,7 @@ const SectionContent = styled.div`
 `;
 
 SectionContent.defaultProps = {
+    bgColor: 'white',
     pb: {xs: 4.5, md: 9},
     pt: {xs: 4.5, md: 9},
 };
