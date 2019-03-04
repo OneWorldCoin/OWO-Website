@@ -14,14 +14,16 @@ const formatVariations = {
 };
 
 const Text = styled.span`
-    ${variations(formatVariations)};
+    flex-wrap: wrap;
 
     ${props => props.as === 'p' && css`
+
         & + & {
             margin-top: 1em;
         }
     `}
 
+    ${variations(formatVariations)};
     ${generateProps};
 `;
 
