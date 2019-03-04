@@ -79,6 +79,13 @@ const sizeVariations = {
         height: 26px;
         padding: 0 16px;
     `,
+
+    large: css`
+        border-radius: 24px;
+        font-size: ${fonts.size('xs')};
+        height: 48px;
+        padding: 0 32px;
+    `,
 };
 
 const ButtonEl = styled.button`
