@@ -5,7 +5,9 @@ import { extractFromQuery } from '../libs/extractFromQuery';
 import { Layout, Hero } from '../components/';
 import { MainContent } from '../theme/components';
 
-import About from '../sections/homepage/About';
+import {
+    About,
+} from '../sections';
 
 class IndexPage extends Layout {
     renderContent () {

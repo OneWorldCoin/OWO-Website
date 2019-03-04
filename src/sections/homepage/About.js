@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Grid, H3, Img, Row, Section, Text } from '../../theme/components';
 
-const About = ({ button, header, img, text }) => {
+export const About = ({ button, header, img, text }) => {
 
     return (
         <Section
@@ -66,5 +66,3 @@ About.propTypes = {
     text: PropTypes.arrayOf(PropTypes.string),
 
 };
-
-export default About;
