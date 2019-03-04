@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Col, Grid, H3, Img, Row, Section, Text } from '../../theme/components';
+import { Col, Grid, H3, Row, Section } from '../../theme/components';
 import { Member } from '../../components';
 
 const TeamWrapper = styled.div`
