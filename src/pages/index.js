@@ -9,13 +9,14 @@ import {
     About,
     Features,
     Team,
+    Coin,
 } from '../sections';
 
 class IndexPage extends Layout {
     renderContent () {
         const { data: dataFromQuery } = this.props;
         const data = extractFromQuery(dataFromQuery);
-        const { about, hero, features, team } = data;
+        const { about, hero, features, team, coin } = data;
 
         return (
             <Fragment>
@@ -29,6 +30,8 @@ class IndexPage extends Layout {
                     <Features features={features} />
 
                     <Team {...team} />
+
+                    <Coin {...coin} />
 
                 </MainContent>
             </Fragment>
