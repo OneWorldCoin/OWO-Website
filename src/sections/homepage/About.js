@@ -65,5 +65,4 @@ About.propTypes = {
         src: PropTypes.string,
     }),
     text: PropTypes.arrayOf(PropTypes.string),
-
 };
