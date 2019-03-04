@@ -160,7 +160,7 @@ Button.propTypes = {
     icon: PropTypes.string,
     label: PropTypes.string,
     leftIcon: PropTypes.string,
-    noShadow: PropTypes.string,
+    noShadow: PropTypes.bool,
     withCaret: PropTypes.bool,
 };
 
