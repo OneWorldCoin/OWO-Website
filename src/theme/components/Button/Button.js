@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { rgba } from 'polished';
+import { rgba, size } from 'polished';
 import { variations, transitions, generateProps } from 'styled-gen';
 
 import { colors, fonts } from '../..';
@@ -47,7 +47,26 @@ const sizeVariations = {
         border-radius: 18px;
         font-size: ${fonts.size('xs')};
         height: 36px;
-        padding: 0 32px;
+        padding-right: ${props => props.iconHighlight && props.icon ? 0 : '2em'};
+        padding-left: ${props => props.iconHighlight && props.leftIcon ? 0 : '2em'};
+
+        ${props => props.iconHighlight && css`
+            .icon {
+                ${size(48)};
+
+                svg {
+                    ${size(20)};
+                }
+
+                &.icon-before {
+                    margin-left: 1em;
+                }
+
+                &.icon-after {
+                    margin-left: 1em;
+                }
+            }
+        `};
     `,
 
     small: css`
@@ -62,6 +81,7 @@ const ButtonEl = styled.button`
     ${transitions('all', 150, 'outCubic')};
 
     align-items: center;
+    border: 0;
     cursor: default;
     display: inline-flex;
     font-family: ${fonts.families.sans};
@@ -69,7 +89,24 @@ const ButtonEl = styled.button`
     justify-content: flex-start;
     letter-spacing: 0.6px;
     outline: 0;
-    border: 0;
+    position: relative;
+
+    .icon {
+        &.icon-before {
+            margin-left: .5em;
+        }
+
+        &.icon-after {
+            margin-left: .5em;
+        }
+
+        ${props => props.iconHighlight && css`
+            align-items: center;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+        `};
+    }
 
     span {
         line-height: 1;
@@ -85,19 +122,21 @@ const ButtonEl = styled.button`
     ${generateProps};
 `;
 
-const Button = ({ children, label, href, icon, leftIcon, iconHighlight, withCaret, ...other}) => {
+const Button = ({ children, label, href, icon, leftIcon, withCaret, ...other}) => {
     return (
         <ButtonEl
             as={href ? 'a' : 'button'}
+            leftIcon={!!leftIcon}
+            icon={!!icon}
             {...other}
         >
-            {!!leftIcon && <IconWrapper className="icon icon-before" iconHighlight={iconHighlight} {...other}><Icon icon={leftIcon} /></IconWrapper>}
+            {!!leftIcon && <IconWrapper className="icon icon-before" {...other}><Icon icon={leftIcon} /></IconWrapper>}
             <span>
                 {!!label && label}
                 {children}
             </span>
             {withCaret && <Icon className="caret" icon="caretDown" size={.5} ml={.5} />}
-            {!!icon && <IconWrapper className="icon icon-after" iconHighlight={iconHighlight} {...other}><Icon icon={icon} /></IconWrapper>}
+            {!!icon && <IconWrapper className="icon icon-after" {...other}><Icon icon={icon} /></IconWrapper>}
         </ButtonEl>
     );
 };
@@ -106,7 +145,6 @@ Button.propTypes = {
     children: PropTypes.node,
     href: PropTypes.string,
     icon: PropTypes.string,
-    iconHighlight: PropTypes.string,
     label: PropTypes.string,
     leftIcon: PropTypes.string,
     withCaret: PropTypes.bool,
