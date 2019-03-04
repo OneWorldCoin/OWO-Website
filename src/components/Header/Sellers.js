@@ -49,6 +49,7 @@ const Sellers = ({ label, sellers}) => {
             <Button
                 ml={1.5}
                 label={label}
+                noShadow
                 small
                 withCaret
             />

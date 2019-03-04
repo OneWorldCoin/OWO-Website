@@ -29,7 +29,7 @@ const colorVariations = {
         color: ${props => props.color ? props.color : colors.white};
         background-color: ${props => !props.lined ? props.bgColor ? props.bgColor : colors.primary : 'transparent'};
 
-        ${props => !props.lined && css`
+        ${props => !props.lined && !props.noShadow && css`
             ${props.overBlack ? css`
                 box-shadow: 0 0 20px ${rgba('black', 1)};
             `: css`
@@ -160,6 +160,7 @@ Button.propTypes = {
     icon: PropTypes.string,
     label: PropTypes.string,
     leftIcon: PropTypes.string,
+    noShadow: PropTypes.string,
     withCaret: PropTypes.bool,
 };
 
