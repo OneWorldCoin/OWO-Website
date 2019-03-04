@@ -30,7 +30,11 @@ const colorVariations = {
         background-color: ${props => !props.lined ? props.bgColor ? props.bgColor : colors.primary : 'transparent'};
 
         ${props => !props.lined && css`
-            box-shadow: 0 0 20px ${props => rgba(props.bgColor ? props.bgColor : colors.primary, 0.3)};
+            ${props.overBlack ? css`
+                box-shadow: 0 0 20px ${rgba('black', 1)};
+            `: css`
+                box-shadow: 0 0 20px ${rgba(props.bgColor ? props.bgColor : colors.primary, 0.3)};
+            `}
         `};
 
         &:hover {
@@ -86,10 +90,11 @@ const ButtonEl = styled.button`
     display: inline-flex;
     font-family: ${fonts.families.sans};
     font-weight: ${fonts.weights.black};
-    justify-content: flex-start;
+    justify-content: ${props => props.fluid ? 'center' : 'flex-start'};
     letter-spacing: 0.6px;
     outline: 0;
     position: relative;
+    width: ${props => props.fluid && '100%'};
 
     .icon {
         &.icon-before {
