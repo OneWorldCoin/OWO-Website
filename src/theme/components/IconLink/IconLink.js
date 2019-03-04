@@ -12,6 +12,10 @@ const sizeVariations = {
     default: css`
         ${size(20)};
     `,
+
+    small: css`
+        ${size(14)};
+    `,
 };
 
 const Link = styled(A).attrs({
