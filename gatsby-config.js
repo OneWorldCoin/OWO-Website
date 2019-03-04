@@ -3,12 +3,13 @@ const activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development
 /* eslint-disable-next-line */
 console.log(`Using environment config: '${activeEnv}'`);
 require('dotenv').config({path: `.env.${activeEnv}`});
-
+console.log(process.env.SUBSCRIBE_URL);
 module.exports = {
     siteMetadata: {
         title: `One World website`,
         description: ``,
         author: ``,
+        subscribeUrl: process.env.SUBSCRIBE_URL,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
