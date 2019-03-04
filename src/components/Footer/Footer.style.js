@@ -7,6 +7,7 @@ const FooterWrapper = styled(Section).attrs({
     bgColor: 'black',
     fromColor: 'lighterGrey',
     asEl: 'footer',
+    pb: 0,
 })`
     display: flex;
     justify-content: center;
