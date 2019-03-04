@@ -8,13 +8,14 @@ import { MainContent } from '../theme/components';
 import {
     About,
     Features,
+    Team,
 } from '../sections';
 
 class IndexPage extends Layout {
     renderContent () {
         const { data: dataFromQuery } = this.props;
         const data = extractFromQuery(dataFromQuery);
-        const { about, hero, features } = data;
+        const { about, hero, features, team } = data;
 
         return (
             <Fragment>
@@ -26,6 +27,8 @@ class IndexPage extends Layout {
                     <About {...about} />
 
                     <Features features={features} />
+
+                    <Team {...team} />
 
                 </MainContent>
             </Fragment>
