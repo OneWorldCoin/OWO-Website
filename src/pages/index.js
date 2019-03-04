@@ -3,33 +3,25 @@ import { graphql } from 'gatsby';
 
 import { extractFromQuery } from '../libs/extractFromQuery';
 import { Layout, Hero } from '../components/';
-import { MainContent, Div, Section, H3 } from '../theme/components';
+import { MainContent } from '../theme/components';
+
+import About from '../sections/homepage/About';
 
 class IndexPage extends Layout {
     renderContent () {
         const { data: dataFromQuery } = this.props;
         const data = extractFromQuery(dataFromQuery);
-        const { hero } = data;
+        const { about, hero } = data;
 
         return (
             <Fragment>
+
                 <Hero isActive={this.state.showHero} {...hero} />
+
                 <MainContent isActive={!this.state.showHero}>
-                    <Section name={'about'} noCurve>
-                        <Div mt={10} size={'200 null'}>
-                            <H3 withLine>About</H3>
-                        </Div>
-                    </Section>
-                    <Section name={'team'} noCurve>
-                        <Div size={'200 null'}>
-                            team
-                        </Div>
-                    </Section>
-                    <Section name={'coin'} noCurve>
-                        <Div size={'200 null'}>
-                            coin
-                        </Div>
-                    </Section>
+
+                    <About {...about} />
+
                 </MainContent>
             </Fragment>
         );
@@ -45,6 +37,74 @@ export const query = graphql`
                 hero {
                     header
                     intro
+                }
+                about {
+                    header
+                    text
+                    img {
+                        src
+                        alt
+                    }
+                    button {
+                        label
+                        icon
+                        url
+                    }
+                }
+                features {
+                    title
+                    text
+                    icon
+                }
+                team {
+                    header
+                    members {
+                        name
+                        position
+                        photo
+                        social {
+                            twitter
+                            linkedin
+                        }
+                    }
+                }
+                coin {
+                    header
+                    img {
+                        src
+                        alt
+                    }
+                    button {
+                        label
+                    }
+                    specs {
+                        label
+                        text
+                    }
+                }
+                roadmap {
+                    header
+                    items {
+                        date
+                        title
+                        text
+                    }
+                }
+                partners {
+                    header
+                    items {
+                        logo
+                        url
+                    }
+                }
+                subscribe {
+                    header
+                    text
+                    input {
+                        placeholder
+                        label
+                    }
+                    thankyouMessage
                 }
             }
         }
