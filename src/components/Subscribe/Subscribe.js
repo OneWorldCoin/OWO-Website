@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
+import { StaticQuery, graphql } from 'gatsby';
+import axios from 'axios';
 
-import { Button as Btn, Icon } from '../../theme/components';
+import { Button as Btn, Icon, Text } from '../../theme/components';
 import { fonts, colors } from '../../theme';
 import { mq } from 'styled-gen';
 
@@ -59,28 +61,84 @@ const BtnIcon = styled.span`
 
 export default class Subscribe extends Component {
 
-    subscribe = () => {
-        /* eslint-disable-next-line */
-        console.log('subscribing');
+    state = {
+        subscribeUrl: null,
+        isLoading: false,
+        email: null,
+        isValid: false,
+        subscribed: false,
     }
+
+    subscribe = url => {
+        url && this.state.isValid && this.setState({loading: true}, () => {
+            axios.post(url, {email: this.state.email})
+                .then(result => this.setState({
+                    subscribed: result.status === 200,
+                    isLoading: false,
+                }))
+                .catch(error => this.setState({
+                    error,
+                    isLoading: false,
+                }));
+        });
+    }
+
+    updateEmail = e => {
+        const email = e.target.value;
+        /* eslint-disable-next-line */
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        this.setState({ email, isValid: re.test(email.toLowerCase()) });
+    };
 
     render() {
         const { label, placeholder } = this.props;
         return (
-            <InputWrapper>
-                <Input placeholder={placeholder} />
-                <Button
-                    large
-                    onClick={this.subscribe}
-                >
-                    <BtnLabel>
-                        {label}
-                    </BtnLabel>
-                    <BtnIcon>
-                        <Icon icon="arrowRight"/>
-                    </BtnIcon>
-                </Button>
-            </InputWrapper>
+            <StaticQuery
+                query={graphql`
+                    query subscribeQuery {
+                        site {
+                            siteMetadata {
+                                subscribeUrl
+                            }
+                        }
+                    }
+                `}
+                render={data => {
+                    const { subscribeUrl } = data.site.siteMetadata;
+
+                    return !this.state.subscribed ?
+                        (
+                            <InputWrapper>
+                                <Input placeholder={placeholder} onChange={this.updateEmail}/>
+                                <Button
+                                    large
+                                    onClick={() => this.subscribe(subscribeUrl)}
+                                    disabled={!this.state.isValid && this.state.email}
+                                    loading={this.state.loading}
+                                >
+                                    <BtnLabel>
+                                        {label}
+                                    </BtnLabel>
+                                    <BtnIcon>
+                                        <Icon icon="arrowRight"/>
+                                    </BtnIcon>
+                                </Button>
+                            </InputWrapper>
+                        ) : (
+                            <Text
+                                as="p"
+                                center
+                                fontLg
+                                primary
+                                fontMedium
+                            >
+                                {this.props.thankyouMessage}
+                            </Text>
+                        )
+                    ;
+                }}
+            />
         );
     }
 }
