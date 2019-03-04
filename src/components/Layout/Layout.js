@@ -20,10 +20,6 @@ class Layout extends Component {
         renderContent: PropTypes.func.isRequired,
     };
 
-    static defaultProps = {
-        renderContent: () => <div></div>,
-    };
-
     state = {
         showHero: true,
     }
@@ -108,7 +104,7 @@ class Layout extends Component {
                                 <html lang="en" />
                             </Helmet>
                             <Header />
-                            {this.renderContent()}
+                            {this.renderContent && this.renderContent()}
                             <Footer />
                         </>
                     )}
