@@ -42,9 +42,9 @@ export const Coin = ({ button, header, img, specs}) => {
                                     </Text>
                                 </Col>
                             ))}
-                            <Col xs={12} md={6} mb={2.5}>
+                            <Col xs={12} sm={3} mb={2.5}>
                                 <Button
-                                    mt={.75}
+                                    mt={1}
                                     label={button.label}
                                     fluid
                                     overBlack
