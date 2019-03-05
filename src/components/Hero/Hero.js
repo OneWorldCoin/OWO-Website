@@ -16,30 +16,44 @@ const HeroWrapper = styled(Div).attrs({
     ${size('100vh', '100vw')};
     ${transitions('transform', 750, 'inOutCirc')};
 
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    position: absolute;
     overflow: hidden;
+    position: absolute;
     top: 0;
+    transform: ${props => props.isActive ? 'translateY(0)' : 'translateY(-100vh)'};
     z-index: 999;
 
-    transform: ${props => props.isActive ? 'translateY(0)' : 'translateY(-100vh)'};
+`;
+
+const RoundWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+
+    ${mq.tablet(css`
+        position: relative;
+        top: initial;
+    `)};
 `;
 
 const Round = styled.div`
-    position: absolute;
-    height: 100vh;
-    width: 350vh;
+    align-items: flex-start;
+    box-shadow: 0 0 70px ${rgba('black', .4)};
     background-color: ${colors.black};
     border-radius: 50%;
     display: flex;
+    height: 100vh;
     justify-content: center;
-    align-items: flex-start;
     padding-top: 5%;
-    top: 85%;
-    box-shadow: 0 0 70px ${rgba('black', .4)};
+    position: absolute;
+    width: 350vh;
+    top: -80px;
 
     svg {
         color: ${rgba(colors.white, .2)};
@@ -48,13 +62,17 @@ const Round = styled.div`
     }
 
     ${mq.from('tablet', css`
-        padding-top: 10%;
-        top: 65%;
+        padding-top: 30px;
+        top: -120px;
     `)};
 
+
     ${mq.from('desktop', css`
-        top: 60%;
+        padding-top: 50px;
+        top: -120px;
     `)};
+
+
 `;
 
 const Hero = props => {
@@ -64,26 +82,39 @@ const Hero = props => {
         <HeroWrapper isActive={isActive}>
             <Stars />
             <Grid>
-                <Row pt={{xs: 3.5, sm: 7.5}}>
-                    <Col xs={12}>
-                        <Logo white />
+                <Row pt={{xs: 2.5, sm: 7.5}}>
+                    <Col
+                        xs={12}
+                        textAlign={{xs: 'center', sm: 'initial'}}
+                    >
+                        <Div
+                            margin={{xs: '0 auto null', sm: '5.625 initial null'}}
+                            maxWidth={{xs: 180, sm: 'initial'}}
+                            textAlign="left"
+                        >
+                            <Logo white />
+                        </Div>
                     </Col>
                 </Row>
                 <Row pt={{xs: 1}}>
-                    <Col xs={3.5} sm={7}>
+                    <Col
+                        xs={3.5}
+                        sm={7}
+                    >
                         <H2
-                            fontSize={{xs: 36, sm: 58, md: 62}}
-                            mt={{sm: 5.625}}
+                            fontSize={{xs: 26, sm: 58, md: 62}}
+                            maxWidth={{xs: 180, sm: 'initial'}}
+                            margin={{xs: '0 auto null', sm: '5.625 initial null'}}
                         >
                             {header}
                         </H2>
                         <Text
                             as="p"
-                            fontLg
+                            fontSize={{xs: 14, sm: 'lg'}}
                             color="white"
                             opacity={0.7}
-                            maxWidth={381}
-                            mt={2}
+                            maxWidth={{xs: 180, sm: 381}}
+                            margin={{xs: '1.5 auto null', sm: '2 null null 0'}}
                         >
                             { intro }
                         </Text>
@@ -100,10 +131,12 @@ const Hero = props => {
                         />
                     </Col>
                 </Row>
+                <RoundWrapper>
+                    <Round>
+                        <IconLink icon="mouse" onClick={() => onDismiss()}/>
+                    </Round>
+                </RoundWrapper>
             </Grid>
-            <Round>
-                <IconLink icon="mouse" onClick={() => onDismiss()}/>
-            </Round>
         </HeroWrapper>
     );
 };
