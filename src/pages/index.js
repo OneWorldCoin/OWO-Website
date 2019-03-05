@@ -23,7 +23,7 @@ class IndexPage extends Layout {
         return (
             <Fragment>
 
-                <Hero isActive={this.state.showHero} {...hero} />
+                <Hero isActive={this.state.showHero} {...hero} onDismiss={this.dismissHero}/>
 
                 <MainContent isActive={!this.state.showHero}>
 

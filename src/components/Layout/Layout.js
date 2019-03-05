@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
@@ -16,31 +15,28 @@ import { GlobalStyle } from '../../theme/components';
 // ];
 
 class Layout extends Component {
-    static propTypes = {
-        renderContent: PropTypes.func.isRequired,
-    };
-
     state = {
         showHero: true,
     }
 
     componentDidMount() {
         document.body.classList.add('no-scroll');
-        window.addEventListener('mousewheel', this.handleMouseWeel, false);
+        window.addEventListener('wheel', this.handleWheel, false);
+        window.addEventListener('touchmove', this.handleWheel, false);
     }
 
-    handleMouseWeel = e => {
-        const scrollingDown = e.deltaY > 0;
-
-        scrollingDown
-            && this.setState({ showHero: false }, () => {
-                window.removeEventListener('mousewheel', this.handleMouseWeel);
-                setTimeout(() => {
-                    document.body.classList.remove('no-scroll');
-                }, 700);
-            })
-        ;
+    handleWheel = e => {
+        const scrollingDown = e.type === 'touchmove' ? true : e.deltaY > 0;
+        scrollingDown && this.dismissHero();
     }
+
+    dismissHero = () => this.setState({ showHero: false }, () => {
+        window.removeEventListener('wheel', this.handleWheel);
+        window.removeEventListener('touchmove', this.handleWheel);
+        setTimeout(() => {
+            document.body.classList.remove('no-scroll');
+        }, 700);
+    });
 
     render() {
         return (
