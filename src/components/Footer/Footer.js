@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import { TextLogo, IconLink } from '../../theme/components';
+import { Animated } from '..';
 
 import {
     FooterWrapper,
@@ -17,19 +18,20 @@ export default class Footer extends Component {
                     render={({footer: { child: { social }}}) => (
                         <>
                             <TextLogo />
-                            <FooterContent>
+                            <Animated comp={FooterContent}>
                                 {social.map(({icon, url}, i) => (
-                                    <IconLink
-                                        key={i}
-                                        ml={i > 0 ? 2 : 0}
-                                        icon={icon}
-                                        href={url}
-                                        target="_blank"
-                                        rel="noopener"
-                                        color="white"
-                                    />
+                                    <div key={i}>
+                                        <IconLink
+                                            ml={i > 0 ? 2 : 0}
+                                            icon={icon}
+                                            href={url}
+                                            target="_blank"
+                                            rel="noopener"
+                                            color="white"
+                                        />
+                                    </div>
                                 ))}
-                            </FooterContent>
+                            </Animated>
                         </>
                     )}
                 />

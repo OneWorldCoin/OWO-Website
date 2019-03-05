@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Col, Div, Grid, Img, Row, Section, Text } from '../../theme/components';
+import { Animated } from '../../components';
 
 export const Features = ({ features }) => {
     return (
@@ -11,7 +12,7 @@ export const Features = ({ features }) => {
             pt={6}
         >
             <Grid>
-                <Row around="xs">
+                <Animated comp={Row} around="xs">
                     {features.map(({icon, text, title }, i) => (
                         <Col xs={10} md={3} key={i} mt={{xs: 4, md: 0}}>
                             <Div center>
@@ -37,7 +38,7 @@ export const Features = ({ features }) => {
                             </Div>
                         </Col>
                     ))}
-                </Row>
+                </Animated>
             </Grid>
         </Section>
     );

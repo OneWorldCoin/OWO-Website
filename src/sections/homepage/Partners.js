@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { mq, transitions } from 'styled-gen';
 
 import { Col, Grid, H3, Row, Section } from '../../theme/components';
+import { Animated } from '../../components';
 
 const LogoLink = styled.a`
 
@@ -35,19 +36,21 @@ export const Partners = ({ header, items }) => {
             fromColor="black"
         >
             <Grid>
-                <Row>
-                    <Col xs={12}>
-                        {/* header */}
-                        <H3
-                            withLine
-                            center
-                            mb={{xs: 4}}
-                        >
-                            {header}
-                        </H3>
-                    </Col>
-                </Row>
-                <Row center="xs" middle="xs">
+                <Animated>
+                    <Row>
+                        <Col xs={12}>
+                            {/* header */}
+                            <H3
+                                withLine
+                                center
+                                mb={{xs: 4}}
+                            >
+                                {header}
+                            </H3>
+                        </Col>
+                    </Row>
+                </Animated>
+                <Animated comp={Row} center="xs" middle="xs">
                     {items.map(({ logo, name, url }, i) => (
                         <Col xs={12} md={4} key={i} mb={6}>
                             <LogoLink
@@ -62,7 +65,7 @@ export const Partners = ({ header, items }) => {
                             </LogoLink>
                         </Col>
                     ))}
-                </Row>
+                </Animated>
             </Grid>
         </Section>
     );
