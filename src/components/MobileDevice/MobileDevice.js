@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { size, rgba } from 'polished';
-import { generateProps } from 'styled-gen';
+import { generateProps, mq } from 'styled-gen';
 
 const MobileDeviceWrapper = styled.div`
     ${size(584, 270)};
@@ -25,6 +25,10 @@ const MobileDeviceWrapper = styled.div`
     overflow: hidden;
 
     ${generateProps};
+
+    ${mq.phone(css`
+        width: 200px;
+    `)};
 `;
 
 const MobileDeviceContent = styled.div`
