@@ -28,6 +28,8 @@ SectionContent.defaultProps = {
 const SvgEl = styled.svg`
     width: 100%;
 
+    margin-bottom: -2px;
+
     ${generateProps};
 `;
 
