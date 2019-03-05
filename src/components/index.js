@@ -1,3 +1,4 @@
+import Animated from './Animated/Animated';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
@@ -8,8 +9,8 @@ import Popover from './Popover/Popover';
 import SEO from './SEO/SEO';
 import Subscribe from './Subscribe/Subscribe';
 
-
 export {
+    Animated,
     Footer,
     Header,
     Hero,

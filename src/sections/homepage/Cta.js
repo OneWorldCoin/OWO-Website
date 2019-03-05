@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Subscribe } from '../../components';
+import { Subscribe, Animated } from '../../components';
 
 import { Col, Grid, H3, Row, Section, Text } from '../../theme/components';
 
@@ -10,7 +10,7 @@ export const Cta = ({ header, input, text, thankyouMessage }) => {
         <Section
             bgColor="lighterGrey"
         >
-            <Grid>
+            <Animated comp={Grid}>
                 <Row center="xs">
                     <Col xs={12} md={4}>
                         {/* header */}
@@ -32,7 +32,7 @@ export const Cta = ({ header, input, text, thankyouMessage }) => {
                         <Subscribe {...input} thankyouMessage={thankyouMessage} />
                     </Col>
                 </Row>
-            </Grid>
+            </Animated>
         </Section>
     );
 };

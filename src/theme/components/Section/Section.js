@@ -15,7 +15,7 @@ const SectionEl = styled(Element)`
 
 const SectionContent = styled.div`
     width: 100%;
-
+    overflow: hidden;
     ${generateProps};
 `;
 

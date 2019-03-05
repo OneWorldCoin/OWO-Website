@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Button, Col, Grid, H3, Img, Row, Section, Text } from '../../theme/components';
+import { Animated } from '../../components';
 
 export const Coin = ({ button, header, img, specs}) => {
     return (
@@ -10,52 +11,58 @@ export const Coin = ({ button, header, img, specs}) => {
             bgColor="black"
         >
             <Grid>
-                <Row>
-                    <Col xs={12} md={6}>
-                        {/* header */}
-                        <H3
-                            withLine
-                            white
-                            mb={{xs: 2, md: 4}}
-                        >
-                            {header}
-                        </H3>
+                <Animated>
+                    <Row>
+                        <Col xs={12} md={6}>
+                            {/* header */}
+                            <H3
+                                withLine
+                                white
+                                mb={{xs: 2, md: 4}}
+                            >
+                                {header}
+                            </H3>
 
-                        <Row>
-                            {specs.map(({ label, text }, i) => (
-                                <Col xs={6} key={i} mb={2.5}>
-                                    <Text
-                                        note
-                                        white
-                                        opacity={.5}
-                                    >
-                                        {label}
-                                    </Text>
-                                    <Text
-                                        as="div"
-                                        mt={.3}
-                                        fontMedium
-                                        fontSize={{xs: 'sm', md: 'xl'}}
-                                        white
-                                    >
-                                        {text}
-                                    </Text>
+                            <Animated comp={Row} animation={{from: 'left'}}>
+                                {specs.map(({ label, text }, i) => (
+                                    <Col xs={6} key={i} mb={2.5}>
+                                        <Text
+                                            note
+                                            white
+                                            opacity={.5}
+                                        >
+                                            {label}
+                                        </Text>
+                                        <Text
+                                            as="div"
+                                            mt={.3}
+                                            fontMedium
+                                            fontSize={{xs: 'sm', md: 'xl'}}
+                                            white
+                                        >
+                                            {text}
+                                        </Text>
+                                    </Col>
+                                ))}
+                                <Col xs={12} sm={3} mb={2.5}>
+                                    <Button
+                                        mt={1}
+                                        label={button.label}
+                                        fluid
+                                        overBlack
+                                    />
                                 </Col>
-                            ))}
-                            <Col xs={12} sm={3} mb={2.5}>
-                                <Button
-                                    mt={1}
-                                    label={button.label}
-                                    fluid
-                                    overBlack
-                                />
+                            </Animated>
+                        </Col>
+                            <Col xs={12} md={6}>
+                                <Animated animation={{from: 'right'}}>
+                                    <div>
+                                        <Img {...img} />
+                                    </div>
+                                </Animated>
                             </Col>
-                        </Row>
-                    </Col>
-                    <Col xs={12} md={6}>
-                        <Img {...img} />
-                    </Col>
-                </Row>
+                    </Row>
+                </Animated>
             </Grid>
         </Section>
     );

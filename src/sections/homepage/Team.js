@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import { mq } from 'styled-gen';
 
 import { Col, Grid, H3, Row, Section } from '../../theme/components';
-import { Member } from '../../components';
+import { Member, Animated } from '../../components';
 
 const TeamWrapper = styled.div`
     display: flex;
@@ -24,27 +24,28 @@ export const Team = ({ header, members }) => {
             fromColor="lighterGrey"
         >
             <Grid>
-                <Row center="xs">
-                    <Col xs={12} md={10}>
+                <Animated>
+                    <Row center="xs">
+                        <Col xs={12} md={10}>
 
-                        {/* header */}
-                        <H3
-                            withLine
-                            center
-                            mb={{xs: 4.5, md: 9}}
-                        >
-                            {header}
-                        </H3>
-                        <TeamWrapper>
-                            {members.map((member, i) => (
-                                <Member
-                                    key={i}
-                                    {...member}
-                                />
-                            ))}
-                        </TeamWrapper>
-                    </Col>
-                </Row>
+                            {/* header */}
+                            <H3
+                                withLine
+                                center
+                                mb={{xs: 4.5, md: 9}}
+                            >
+                                {header}
+                            </H3>
+                            <Animated comp={TeamWrapper}>
+                                {members.map((member, i) => (
+                                    <div key={i}>
+                                        <Member {...member}/>
+                                    </div>
+                                ))}
+                            </Animated>
+                        </Col>
+                    </Row>
+                </Animated>
             </Grid>
         </Section>
     );
