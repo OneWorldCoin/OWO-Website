@@ -4,7 +4,7 @@ import { size, rgba } from 'polished';
 import { generateProps, mq } from 'styled-gen';
 
 const MobileDeviceWrapper = styled.div`
-    ${size(584, 270)};
+    ${size('auto', 270)};
 
     display: inline-block;
 
@@ -21,14 +21,15 @@ const MobileDeviceWrapper = styled.div`
 
     background-color: ${props => props.theme.colors.black};
     border-radius: 35px;
-    padding: 8px;
     overflow: hidden;
-
-    ${generateProps};
+    padding: 8px;
 
     ${mq.phone(css`
+        height: auto;
         width: 200px;
     `)};
+
+    ${generateProps};
 `;
 
 const MobileDeviceContent = styled.div`
