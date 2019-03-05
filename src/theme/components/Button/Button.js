@@ -152,6 +152,8 @@ const ButtonEl = styled.button`
 const ButtonContent = styled.div`
     ${transitions(['opacity', 'visibility'], 250, 'outCubic')};
 
+    align-items: center;
+    display: flex;
     opacity: ${props => props.isActive ? 1 : 0};
     visibility: ${props => props.isActive ? 1 : 0};
 `;
