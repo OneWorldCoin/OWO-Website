@@ -155,7 +155,7 @@ const ButtonContent = styled.div`
     align-items: center;
     display: flex;
     opacity: ${props => props.isActive ? 1 : 0};
-    visibility: ${props => props.isActive ? 1 : 0};
+    visibility: ${props => props.isActive ? 'visible' : 'hidden'};
 `;
 
 const Spinner = styled.div`
@@ -163,7 +163,7 @@ const Spinner = styled.div`
     ${position('absolute', 0)};
 
     opacity: ${props => props.isActive ? 1 : 0};
-    visibility: ${props => props.isActive ? 1 : 0};
+    visibility: ${props => props.isActive ? 'visible' : 'hidden'};
     display: flex;
     color: inherit;
     justify-content: center;
