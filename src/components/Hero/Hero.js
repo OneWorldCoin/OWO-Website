@@ -88,7 +88,7 @@ const Hero = props => {
                         textAlign={{xs: 'center', sm: 'initial'}}
                     >
                         <Div
-                            margin={{xs: '0 auto null', sm: '5.625 initial null'}}
+                            margin={{xs: '0 auto null', sm: 'null initial null'}}
                             maxWidth={{xs: 180, sm: 'initial'}}
                             textAlign="left"
                         >
