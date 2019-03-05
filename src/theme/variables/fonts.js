@@ -43,7 +43,7 @@ const families = { sans: 'Gotham' };
 
 const fonts = {
     config: [
-        { family: 'Gotham', path: 'fonts/gotham', prefix: 'gotham-', weights },
+        { family: 'Gotham', path: 'fonts/gotham', prefix: 'gotham-', weights, localLoading: true },
     ],
 
     families,
