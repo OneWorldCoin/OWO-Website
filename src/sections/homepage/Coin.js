@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Button, Col, Grid, H3, Img, Row, Section, Text } from '../../theme/components';
 import { Animated } from '../../components';
+import { modal } from '../../libs/modal';
 
-export const Coin = ({ button, header, img, specs}) => {
+export const Coin = ({ button, header, img, specs, rewards}) => {
     return (
         <Section
             name="coin"
@@ -50,6 +51,7 @@ export const Coin = ({ button, header, img, specs}) => {
                                         label={button.label}
                                         fluid
                                         overBlack
+                                        onClick={() => modal.open('default', {...rewards})}
                                     />
                                 </Col>
                             </Animated>
@@ -76,6 +78,10 @@ Coin.propTypes = {
     img: PropTypes.shape({
         alt: PropTypes.string,
         src: PropTypes.string,
+    }),
+    rewards: PropTypes.shape({
+        table: PropTypes.string,
+        notes: PropTypes.string,
     }),
     specs: PropTypes.arrayOf(PropTypes.shape({
         label: PropTypes.string,

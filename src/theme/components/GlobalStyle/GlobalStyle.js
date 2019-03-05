@@ -26,9 +26,11 @@ const GlobalStyle = createGlobalStyle`
         * {
             box-sizing: border-box;
         }
+
         &.loading,
-        &.no-scroll {
-            overflow-y: hidden;
+        &.no-scroll,
+        &.with-modal {
+            overflow-y: hidden !important;
         }
     }
 

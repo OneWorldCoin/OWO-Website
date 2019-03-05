@@ -3,9 +3,11 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
+import { ModalManager } from '../../libs/modal';
 import theme from '../../theme';
 import { Header, Footer } from '../../components';
 import { GlobalStyle } from '../../theme/components';
+import Modal from '../Modal/Modal';
 
 // const favicons = [
 //     { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' },
@@ -99,6 +101,7 @@ class Layout extends Component {
                             >
                                 <html lang="en" />
                             </Helmet>
+                            <ModalManager modals={{ default: Modal }} />
                             <Header />
                             {this.renderContent && this.renderContent()}
                             <Footer />

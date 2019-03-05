@@ -94,6 +94,10 @@ export const query = graphql`
                     button {
                         label
                     }
+                    rewards {
+                        table
+                        notes
+                    }
                     specs {
                         label
                         text

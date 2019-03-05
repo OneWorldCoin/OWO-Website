@@ -124,6 +124,10 @@
         },
         "button": {
             "label": "Rewards"
+        },
+        "rewards": {
+            "table": "/img/rewards/table.svg",
+            "notes": "Masternode Collateral required: 100,000 coins"
         }
     },
     "roadmap": {
