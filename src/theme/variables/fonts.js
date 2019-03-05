@@ -1,9 +1,11 @@
 const weights = {
+    extralight: 200,
     light: 300,
     regular: 400,
     medium: 500,
     bold: 700,
-    black: 900,
+    black: 800,
+    ultra: 900,
 };
 
 const sizes = {
@@ -41,7 +43,7 @@ const families = { sans: 'Gotham' };
 
 const fonts = {
     config: [
-        { family: 'Gotham', path: 'fonts/gotham', prefix: 'gotham-', weights },
+        { family: 'Gotham', path: 'fonts/gotham', prefix: 'gotham-', weights, localLoading: true },
     ],
 
     families,
