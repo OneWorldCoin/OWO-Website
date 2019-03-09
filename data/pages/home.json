@@ -22,17 +22,17 @@
     "features": [
         {
             "title": "Wallet Transactions",
-            "text": "Send, Receive and View all transactions",
+            "text": "Send, Receive and View all transactions. Just like using a normal QT wallet.",
             "icon": "/img/illustrations/icon-wallet.svg"
         },
         {
             "title": "Coin Staking",
-            "text": "In a first for POS coins you can now Stake any coin signed up with us directly from the APP",
+            "text": "In a first for POS coins, you will now be able to Stake your coins directly from within the APP",
             "icon": "/img/illustrations/icon-coin.svg"
         },
         {
             "title": "Masternodes Ops",
-            "text": "Setup, view and also control all your Masternodes also from the APP",
+            "text": "Setup, view and also control all your Masternodes from the convenience of the APP",
             "icon": "/img/illustrations/icon-cpu.svg"
         }
     ],
@@ -169,7 +169,7 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "/img/partners/beacon.png",
+                "logo": "/img/partners/cfl.png",
                 "name": "CryptoFlow",
                 "url": "https://cryptoflow.co.uk"
             },
