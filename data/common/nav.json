@@ -27,17 +27,17 @@
                     {
                         "label": "Mac Os",
                         "icon": "apple",
-                        "url": "http://google.com"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-mac.zip"
                     },
                     {
                         "label": "Linux",
                         "icon": "tux",
-                        "url": "http://google.com"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-lin.zip"
                     },
                     {
                         "label": "Windows",
                         "icon": "windows",
-                        "url": "http://google.com"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-win.zip"
                     }
                 ]
             },
@@ -48,12 +48,12 @@
                     {
                         "label": "OWO",
                         "icon": "owo",
-                        "url": "http://google.com"
+                        "url": "https://owo.exp.monitorit4.me/"
                     },
                     {
                         "label": "OWO Mobile",
                         "icon": "owo",
-                        "url": "http://google.com"
+                        "url": "https://owo.ccore.online/"
                     }
                 ]
             },
@@ -64,7 +64,7 @@
                     {
                         "label": "One World Masternode Setup Guide",
                         "icon": "owo",
-                        "url": "http://google.com"
+                        "url": "https://github.com/OneWorldCoin/MN"
                     }
                 ]
             }
@@ -85,23 +85,23 @@
             }
         ]
     },
-    "github": "http://github.com",
+    "github": "https://github.com/OneWorldCoin/owo",
     "social": [
         {
             "icon": "twitter",
-            "url": "https://twitter.com"
+            "url": "https://twitter.com/OneWorldCoin1"
         },
         {
             "icon": "telegram",
-            "url": "https://telegram.com"
+            "url": "https://t.me/oneworldofficial"
         },
         {
             "icon": "discord",
             "url": "https://discord.gg/BhXdPtG"
         },
         {
-            "icon": "mail",
-            "url": "mailto:support@oneworldcoin.io"
+            "icon": "facebook",
+            "url": "https://rebrand.ly/OWO_Facebook"
         }
     ]
 }
