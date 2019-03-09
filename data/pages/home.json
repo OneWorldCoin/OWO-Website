@@ -1,22 +1,22 @@
 {
     "hero": {
         "header": "Masternodes and Staking go Mobile",
-        "intro": "Innovation in the Masternode space taking it to a whole New Level"
+        "intro": "Taking innovation in the Masternode space to a whole New Level"
     },
     "about": {
         "header": "About",
         "text": [
-            "The creators of CryptoFlow, the near instant Fiat to Crypto transfers payment platform, are delighted to introduce you to the One World project.",
-            "One World is a new and innovative project keeping with the initial CryptoFlow Mantra of making Crypto more accessible for everyone."
+            "From the same minds behind CryptoFlow, the fiat-to-crypto gateway platform, comes One World, a revolutionary cryptocurrency platform.",
+            "Keeping with the initial CryptoFlow Mantra of making Crypto more accessible for everyone, One World will allow users to bring their cryptocurrency with them via an application on their mobile phone"
         ],
         "img": {
             "src": "/img/illustrations/phone-wallet.svg",
             "alt": ""
         },
         "button": {
-            "label": "WhitePaper",
+            "label": "LightPaper",
             "icon": "newspaper",
-            "url": "/docs/whitepaper.pdf"
+            "url": "/docs/Lightpaper.pdf"
         }
     },
     "features": [
@@ -45,24 +45,24 @@
                 "photo": "/img/team/bar.png",
                 "social": {
                     "twitter": "",
-                    "linkedin": "http://linkedin.com"
+                    "linkedin": "https://www.linkedin.com/in/barry-doyle-06561ab1/"
                 }
             },
             {
-                "name": "Pedro Logo",
+                "name": "Pedro Lobo",
                 "position": "Administrator",
                 "photo": "/img/team/lobo.png",
                 "social": {
-                    "twitter": "http://twitter.com",
-                    "linkedin": "http://linkedin.com"
+                    "twitter": "https://twitter.com/cryptomekanics",
+                    "linkedin": ""
                 }
             },
             {
-                "name": "John Movalis",
+                "name": "João Marques",
                 "position": "Operations Manager",
                 "photo": "/img/team/movalis.png",
                 "social": {
-                    "twitter": "",
+                    "twitter": "https://twitter.com/Movaliss",
                     "linkedin": ""
                 }
             },
@@ -72,16 +72,16 @@
                 "photo": "/img/team/patrick.png",
                 "social": {
                     "twitter": "",
-                    "linkedin": ""
+                    "linkedin": "https://www.linkedin.com/in/patricktompkins929/"
                 }
             },
             {
-                "name": "Aleš Kalan",
-                "position": "Bot Manager",
+                "name": "Sheyhan Jay",
+                "position": "Moderator",
                 "photo": "/img/team/ales.png",
                 "social": {
                     "twitter": "",
-                    "linkedin": "http://linkedin.com"
+                    "linkedin": ""
                 }
             }
         ]
@@ -169,40 +169,25 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "/img/partners/partner1.svg",
-                "name": "",
-                "url": ""
+                "logo": "/img/partners/beacon.png",
+                "name": "CryptoFlow",
+                "url": "https://cryptoflow.co.uk"
             },
             {
-                "logo": "/img/partners/partner2.svg",
-                "name": "",
-                "url": "https://google.com"
+                "logo": "/img/partners/beacon.png",
+                "name": "Beacon",
+                "url": "https://beaconcrypto.org/"
             },
             {
-                "logo": "/img/partners/partner3.svg",
-                "name": "",
-                "url": ""
-            },
-            {
-                "logo": "/img/partners/partner4.svg",
-                "name": "",
-                "url": "https://google.com"
-            },
-            {
-                "logo": "/img/partners/partner5.svg",
-                "name": "",
-                "url": ""
-            },
-            {
-                "logo": "/img/partners/partner6.svg",
-                "name": "",
-                "url": ""
+                "logo": "/img/partners/spp.png",
+                "name": "Simple POS Pool",
+                "url": "https://simplepospool.com/"
             }
         ]
     },
     "subscribe": {
         "header": "Get Notified!",
-        "text": "Subscribe to know when One World app will be live...",
+        "text": "Subscribe to know when One World app goes live...",
         "input": {
             "placeholder": "Your email",
             "label": "Subscribe"
