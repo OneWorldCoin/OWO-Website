@@ -125,8 +125,12 @@ export const query = graphql`
                     input {
                         placeholder
                         label
+                    },
+                    optIn {
+                        label
                     }
                     thankyouMessage
+                    errorMessage
                 }
             }
         }

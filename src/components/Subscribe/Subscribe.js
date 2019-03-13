@@ -67,6 +67,8 @@ export default class Subscribe extends Component {
         email: null,
         isValid: false,
         subscribed: false,
+        message: null,
+        error: null,
     }
 
     subscribe = url => {
@@ -75,10 +77,12 @@ export default class Subscribe extends Component {
                 .then(result => this.setState({
                     subscribed: result.status === 200,
                     isLoading: false,
+                    message: this.props.thankyouMessage,
                 }))
                 .catch(error => this.setState({
                     error,
                     isLoading: false,
+                    message: this.props.errorMessage,
                 }));
         });
     }
@@ -107,24 +111,37 @@ export default class Subscribe extends Component {
                 render={data => {
                     const { subscribeUrl } = data.site.siteMetadata;
 
-                    return !this.state.subscribed ?
+                    return !this.state.subscribed || !this.state.error ?
                         (
-                            <InputWrapper>
-                                <Input placeholder={placeholder} onChange={this.updateEmail}/>
-                                <Button
-                                    large
-                                    onClick={() => this.subscribe(subscribeUrl)}
-                                    disabled={!this.state.isValid && this.state.email}
-                                    loading={this.state.loading}
+                            <React.Fragment>
+                                <InputWrapper>
+                                    <Input placeholder={placeholder} onChange={this.updateEmail}/>
+                                    <Button
+                                        large
+                                        onClick={() => this.subscribe(subscribeUrl)}
+                                        disabled={!this.state.isValid && this.state.email}
+                                        loading={this.state.loading}
+                                    >
+                                        <BtnLabel>
+                                            {label}
+                                        </BtnLabel>
+                                        <BtnIcon>
+                                            <Icon icon="arrowRight"/>
+                                        </BtnIcon>
+                                    </Button>
+                                </InputWrapper>
+                                <Text
+                                    as="p"
+                                    left
+                                    fontXxs
+                                    fontMedium
+                                    padding="null 1"
+                                    greyDark
+                                    mt={1.15}
                                 >
-                                    <BtnLabel>
-                                        {label}
-                                    </BtnLabel>
-                                    <BtnIcon>
-                                        <Icon icon="arrowRight"/>
-                                    </BtnIcon>
-                                </Button>
-                            </InputWrapper>
+                                    {this.props.optIn.label}
+                                </Text>
+                            </React.Fragment>
                         ) : (
                             <Text
                                 as="p"
@@ -133,7 +150,7 @@ export default class Subscribe extends Component {
                                 primary
                                 fontMedium
                             >
-                                {this.props.thankyouMessage}
+                                {this.state.message}
                             </Text>
                         )
                     ;
