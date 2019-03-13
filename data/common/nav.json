@@ -88,6 +88,10 @@
     "github": "https://github.com/OneWorldCoin/owo",
     "social": [
         {
+            "icon": "facebook",
+            "url": "https://facebook.com"
+        },
+        {
             "icon": "twitter",
             "url": "https://twitter.com/OneWorldCoin1"
         },
