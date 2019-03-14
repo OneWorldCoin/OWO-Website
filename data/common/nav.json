@@ -67,6 +67,17 @@
                         "url": "https://github.com/OneWorldCoin/MN"
                     }
                 ]
+            },
+            {
+                "label": "News",
+                "icon": "newspaper",
+                "items": [
+                    {
+                        "label": "Bitcoin Talk Announcement",
+                        "icon": "bookmark",
+                        "url": "https://rebrand.ly/OWO_BitCoinTalk"
+                    }
+                ]
             }
         ]
     },
@@ -89,7 +100,7 @@
     "social": [
         {
             "icon": "facebook",
-            "url": "https://facebook.com"
+            "url": "https://rebrand.ly/OWO_Facebook"
         },
         {
             "icon": "twitter",
@@ -102,10 +113,6 @@
         {
             "icon": "discord",
             "url": "https://discord.gg/BhXdPtG"
-        },
-        {
-            "icon": "mail",
-            "url": "https://rebrand.ly/OWO_Facebook"
         }
     ]
 }
