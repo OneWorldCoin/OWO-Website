@@ -1,0 +1,118 @@
+{
+    "navlist": [
+        {
+            "name": "about",
+            "label": "About"
+        },
+        {
+            "name": "team",
+            "label": "Team"
+        },
+        {
+            "name": "coin",
+            "label": "Coin"
+        },
+        {
+            "name": "partners",
+            "label": "Partners"
+        }
+    ],
+    "resources": {
+        "label": "Resources",
+        "categories": [
+            {
+                "label": "Wallet download",
+                "icon": "walletDownload",
+                "items": [
+                    {
+                        "label": "Mac Os",
+                        "icon": "apple",
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-mac.zip"
+                    },
+                    {
+                        "label": "Linux",
+                        "icon": "tux",
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-lin.zip"
+                    },
+                    {
+                        "label": "Windows",
+                        "icon": "windows",
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-win.zip"
+                    }
+                ]
+            },
+            {
+                "label": "Block explorers",
+                "icon": "search",
+                "items": [
+                    {
+                        "label": "OWO",
+                        "icon": "owo",
+                        "url": "https://owo.exp.monitorit4.me/"
+                    },
+                    {
+                        "label": "OWO Mobile",
+                        "icon": "owo",
+                        "url": "https://owo.ccore.online/"
+                    }
+                ]
+            },
+            {
+                "label": "Guides",
+                "icon": "book",
+                "items": [
+                    {
+                        "label": "One World Masternode Setup Guide",
+                        "icon": "owo",
+                        "url": "https://github.com/OneWorldCoin/MN"
+                    }
+                ]
+            },
+            {
+                "label": "News",
+                "icon": "newspaper",
+                "items": [
+                    {
+                        "label": "Bitcoin Talk Announcement",
+                        "icon": "bookmark",
+                        "url": "https://rebrand.ly/OWO_BitCoinTalk"
+                    }
+                ]
+            }
+        ]
+    },
+    "buy": {
+        "label": "Buy OWO",
+        "sellers": [
+            {
+                "name": "crex24",
+                "url": "https://crex24.com/exchange/OWO-BTC",
+                "logo": "/img/sellers/crex24.svg"
+            },
+            {
+                "name": "midex",
+                "url": "https://en.midex.com/trade/OWO_BTC",
+                "logo": "/img/sellers/midex.svg"
+            }
+        ]
+    },
+    "github": "https://github.com/OneWorldCoin/owo",
+    "social": [
+        {
+            "icon": "facebook",
+            "url": "https://rebrand.ly/OWO_Facebook"
+        },
+        {
+            "icon": "twitter",
+            "url": "https://twitter.com/OneWorldCoin1"
+        },
+        {
+            "icon": "telegram",
+            "url": "https://t.me/oneworldofficial"
+        },
+        {
+            "icon": "discord",
+            "url": "https://discord.gg/BhXdPtG"
+        }
+    ]
+}

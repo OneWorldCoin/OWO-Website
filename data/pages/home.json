@@ -1,0 +1,201 @@
+{
+    "hero": {
+        "header": "Masternodes and Staking go Mobile",
+        "intro": "Taking innovation in the Masternode space to a whole New Level"
+    },
+    "about": {
+        "header": "About",
+        "text": [
+            "From the same minds behind CryptoFlow, the fiat-to-crypto gateway platform, comes One World, a revolutionary cryptocurrency platform.",
+            "Keeping with the initial CryptoFlow Mantra of making Crypto more accessible for everyone, One World will allow users to bring their cryptocurrency with them via an application on their mobile phone"
+        ],
+        "img": {
+            "src": "/img/illustrations/phone-wallet.svg",
+            "alt": ""
+        },
+        "button": {
+            "label": "LightPaper",
+            "icon": "newspaper",
+            "url": "/docs/Lightpaper.pdf"
+        }
+    },
+    "features": [
+        {
+            "title": "Wallet Transactions",
+            "text": "Send, Receive and View all transactions. Just like using a normal QT wallet.",
+            "icon": "/img/illustrations/icon-wallet.svg"
+        },
+        {
+            "title": "Coin Staking",
+            "text": "In a first for POS coins, you will now be able to Stake your coins directly from within the APP",
+            "icon": "/img/illustrations/icon-coin.svg"
+        },
+        {
+            "title": "Masternode Operations",
+            "text": "Setup, view and also control all your Masternodes from the convenience of the APP",
+            "icon": "/img/illustrations/icon-cpu.svg"
+        }
+    ],
+    "team": {
+        "header": "Team",
+        "members": [
+            {
+                "name": "Barry Doyle",
+                "position": "Founder",
+                "photo": "/img/team/bar.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": "https://www.linkedin.com/in/barry-doyle-06561ab1/"
+                }
+            },
+            {
+                "name": "Pedro Lobo",
+                "position": "Administrator",
+                "photo": "/img/team/lobo.png",
+                "social": {
+                    "twitter": "https://twitter.com/cryptomekanics",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "João Marques",
+                "position": "Operations Manager",
+                "photo": "/img/team/movalis.png",
+                "social": {
+                    "twitter": "https://twitter.com/Movaliss",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "Patrick Tompkins",
+                "position": "Advisor",
+                "photo": "/img/team/patrick.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": "https://www.linkedin.com/in/patricktompkins929/"
+                }
+            },
+            {
+                "name": "Sheyhan Jay",
+                "position": "Community Manager",
+                "photo": "/img/team/shey.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            }
+        ]
+    },
+    "coin": {
+        "header": "Coin specs",
+        "specs": [
+            {
+                "label": "Ticker",
+                "text": "OWO"
+            },
+            {
+                "label": "Algorithm",
+                "text": "QUARK"
+            },
+            {
+                "label": "Max supply",
+                "text": "500,000,000"
+            },
+            {
+                "label": "Reward rate",
+                "text": "MN 80% / POS 20%"
+            },
+            {
+                "label": "MN Collateral",
+                "text": "100,000 OWO"
+            },
+            {
+                "label": "Block timer",
+                "text": "60 sec"
+            },
+            {
+                "label": "Min stake age",
+                "text": "1 hour"
+            }
+        ],
+        "img": {
+            "src": "/img/illustrations/coin.svg",
+            "alt": ""
+        },
+        "button": {
+            "label": "Rewards"
+        },
+        "rewards": {
+            "table": "/img/rewards/table.svg",
+            "notes": "Masternode Collateral required: 100,000 coins"
+        }
+    },
+    "roadmap": {
+        "header": "Roadmap",
+        "items": [
+            {
+                "date": "Quarter 1 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 2 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 3 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "AGO 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "DEC 2019",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            },
+            {
+                "date": "Quarter 1 2020",
+                "title": "Lorem Donest",
+                "text": "Donec odio. Quisque volutpat mattis eros."
+            }
+        ]
+    },
+    "partners": {
+        "header": "Partners",
+        "items": [
+            {
+                "logo": "/img/partners/cfl.png",
+                "name": "CryptoFlow",
+                "url": "https://cryptoflow.co.uk"
+            },
+            {
+                "logo": "/img/partners/beacon.png",
+                "name": "Beacon",
+                "url": "https://beaconcrypto.org/"
+            },
+            {
+                "logo": "/img/partners/spp.png",
+                "name": "Simple POS Pool",
+                "url": "https://simplepospool.com/"
+            }
+        ]
+    },
+    "subscribe": {
+        "header": "Get Notified!",
+        "text": "Subscribe to know when One World app goes live...",
+        "input": {
+            "placeholder": "Your email",
+            "label": "Subscribe"
+        },
+        "optIn": {
+            "label": "We will only use your email to inform you of product launch or important news regarding the product."
+        },
+        "thankyouMessage": "Thank you!",
+        "errorMessage": "Ups! Something went wrong. Please try again later..."
+    }
+}
