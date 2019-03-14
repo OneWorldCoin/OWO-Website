@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-
+import styled, { css } from 'styled-components';
 import { colors, fonts } from '../../theme';
 import { getColor } from '../../theme/helpers/getColor';
 import { A } from '../../theme/components';
+import { mq } from 'styled-gen';
 
 const ResourcesCategoriesList = styled.ul`
     padding: 20px;
@@ -10,11 +10,19 @@ const ResourcesCategoriesList = styled.ul`
     color: ${colors.white};
     display: flex;
     flex-wrap: wrap;
+
+    ${mq.phone(css`
+        width: 100%;
+    `)};
 `;
 
 const ResourcesCategoriesItem = styled.li`
     padding: 20px;
     width: 50%;
+
+    ${mq.phone(css`
+        width: 100%;
+    `)};
 `;
 
 const ResourcesCategoriesLabel = styled.div`

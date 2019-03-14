@@ -5,7 +5,7 @@ import { transitions } from 'styled-gen';
 
 import { getColor } from '../../theme/helpers/getColor';
 import { colors } from '../../theme';
-import { Button } from '../../theme/components';
+import { Button, IconLink } from '../../theme/components';
 
 const SellerLinkEl = styled.a`
     ${transitions('background-color', 250, 'outCubic')};
@@ -46,13 +46,24 @@ const Sellers = ({ label, sellers}) => {
         <Popover
             content={sellers.map(({ name, ...other }) => <SellerLink key={name} {...other} />)}
         >
-            <Button
-                ml={1.5}
-                label={label}
-                noShadow
-                small
-                withCaret
-            />
+            <React.Fragment>
+                <Button
+                    ml={1.5}
+                    label={label}
+                    noShadow
+                    small
+                    withCaret
+                    display={{xs: 'none', sm: 'inline-flex'}}
+                />
+                <IconLink
+                    color="primary"
+                    ml={1.5}
+                    icon="logo"
+                    target="_blank"
+                    rel="noopener"
+                    display={{xs: 'inline-flex', sm: 'none'}}
+                />
+            </React.Fragment>
         </Popover>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { position, rgba, size } from 'polished';
-import { transitions } from 'styled-gen';
+import { transitions, mq } from 'styled-gen';
 import { colors } from '../../theme';
 
 const PopoverContainerWrapper = styled.div`
@@ -35,11 +35,36 @@ const PopoverContainerWrapper = styled.div`
         transform: rotate(45deg);
         z-index: -1;
     }
+
+    ${mq.phone(css`
+        ${position('fixed', 'auto', 0, 0, 0)};
+
+        border-radius: 0;
+        box-shadow: 0 -10px 20px ${rgba(colors.black, .16)};
+        margin-top: 0;
+        opacity: 1;
+        transform: translateY(100%);
+        width: 100%;
+
+        &::before {
+            display: none;
+        }
+
+        ${props => props.isActive && css`
+            transform: translateY(0);
+            visibility: visible;
+        `}
+    `)};
 `;
 
 const PopoverContent = styled.div`
     border-radius: 12px;
     overflow: hidden;
+
+    ${mq.phone(css`
+        overflow: auto;
+        max-height: 70vh;
+    `)};
 `;
 
 const PopoverContainer = ({ children, ...props }) => {

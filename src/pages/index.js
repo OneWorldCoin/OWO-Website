@@ -37,7 +37,7 @@ class IndexPage extends Layout {
 
                     <Partners {...partners} />
 
-                    <Cta {...subscribe} />
+                    {/* <Cta {...subscribe} /> */}
 
                 </MainContent>
             </Fragment>
