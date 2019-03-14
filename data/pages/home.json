@@ -192,6 +192,10 @@
             "placeholder": "Your email",
             "label": "Subscribe"
         },
-        "thankyouMessage": "Thank you!"
+        "optIn": {
+            "label": "We will only use your email to inform you of product launch or important news regarding the product."
+        },
+        "thankyouMessage": "Thank you!",
+        "errorMessage": "Ups! Something went wrong. Please try again later..."
     }
 }

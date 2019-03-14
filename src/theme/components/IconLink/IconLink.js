@@ -21,6 +21,8 @@ const sizeVariations = {
 const Link = styled(A).attrs({
     withoutHoverEffect: true,
 })`
+    display: inline-flex;
+
     ${mq.tabletLandscape(css`
         &:hover {
             svg {

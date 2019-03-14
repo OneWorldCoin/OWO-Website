@@ -12,6 +12,7 @@ const colors = {
     deepBlack: '#222222',
     white: '#ffffff',
 
+    greyDark: '#aaaaaa',
     lighterGrey: '#f8f8f8',
     lightGrey: '#e1e1e1',
 };

@@ -37,7 +37,7 @@ class IndexPage extends Layout {
 
                     <Partners {...partners} />
 
-                    <Cta {...subscribe} />
+                    {/* <Cta {...subscribe} /> */}
 
                 </MainContent>
             </Fragment>
@@ -125,8 +125,12 @@ export const query = graphql`
                     input {
                         placeholder
                         label
+                    },
+                    optIn {
+                        label
                     }
                     thankyouMessage
+                    errorMessage
                 }
             }
         }

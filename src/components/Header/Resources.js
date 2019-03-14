@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popover } from '../';
 
-import { Icon, Button } from '../../theme/components';
+import { Icon, Button, IconLink } from '../../theme/components';
 
 import {
     ResourcesCategoriesList,
@@ -10,7 +10,7 @@ import {
     ResourcesSublist,
     ResourcesSublistItem,
     ResourcesLink,
-} from './resources.style';
+} from './Resources.style';
 
 const Resources = ({ categories, label }) => {
     return (
@@ -47,15 +47,25 @@ const Resources = ({ categories, label }) => {
                 </ResourcesCategoriesList>
             )}
         >
-            <Button
-                color="black"
-                label={label}
-                lined
-                small
-                withCaret
-                ml={1.5}
-                display={{xs: 'none', sm: 'inline-flex'}}
-            />
+            <React.Fragment>
+                <Button
+                    color="black"
+                    label={label}
+                    lined
+                    small
+                    withCaret
+                    ml={1.5}
+                    display={{xs: 'none', sm: 'inline-flex'}}
+                />
+                <IconLink
+                    color="greyDark"
+                    ml={1}
+                    icon="books"
+                    target="_blank"
+                    rel="noopener"
+                    display={{xs: 'inline-flex', sm: 'none'}}
+                />
+            </React.Fragment>
         </Popover>
     );
 };
