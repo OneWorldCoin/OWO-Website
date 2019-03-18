@@ -27,7 +27,7 @@
         },
         {
             "title": "Coin Staking",
-            "text": "In a first for POS coins, you will now be able to Stake your coins directly from within the APP",
+            "text": "Quickly and easily choose any amount of coins you wish to stake from within the APP",
             "icon": "/img/illustrations/icon-coin.svg"
         },
         {
@@ -79,6 +79,33 @@
                 "name": "Sheyhan Jay",
                 "position": "Community Manager",
                 "photo": "/img/team/shey.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "Aleš Kalan",
+                "position": "Bot Developer",
+                "photo": "/img/team/generic.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "Solace - One World",
+                "position": "Customer Support Manager",
+                "photo": "/img/team/generic.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "JohnyCrypto",
+                "position": "Media Designer",
+                "photo": "/img/team/generic.png",
                 "social": {
                     "twitter": "",
                     "linkedin": ""
