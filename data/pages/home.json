@@ -49,16 +49,7 @@
                 }
             },
             {
-                "name": "Pedro Lobo",
-                "position": "Administrator",
-                "photo": "/img/team/lobo.png",
-                "social": {
-                    "twitter": "https://twitter.com/cryptomekanics",
-                    "linkedin": ""
-                }
-            },
-            {
-                "name": "João Marques",
+                "name": "João Marques (aka Movalis)",
                 "position": "Operations Manager",
                 "photo": "/img/team/movalis.png",
                 "social": {
@@ -67,44 +58,35 @@
                 }
             },
             {
-                "name": "Patrick Tompkins",
-                "position": "Advisor",
-                "photo": "/img/team/patrick.png",
+                "name": "Pedro Lobo (aka CryptoMekanics)",
+                "position": "Technical Advisor",
+                "photo": "/img/team/lobo.png",
                 "social": {
-                    "twitter": "",
-                    "linkedin": "https://www.linkedin.com/in/patricktompkins929/"
-                }
-            },
-            {
-                "name": "Sheyhan Jay",
-                "position": "Community Manager",
-                "photo": "/img/team/shey.png",
-                "social": {
-                    "twitter": "",
-                    "linkedin": ""
-                }
-            },
-            {
-                "name": "Aleš Kalan",
-                "position": "Bot Developer",
-                "photo": "/img/team/generic.png",
-                "social": {
-                    "twitter": "",
-                    "linkedin": ""
-                }
-            },
-            {
-                "name": "Solace - One World",
-                "position": "Customer Support Manager",
-                "photo": "/img/team/generic.png",
-                "social": {
-                    "twitter": "",
+                    "twitter": "https://twitter.com/cryptomekanics",
                     "linkedin": ""
                 }
             },
             {
                 "name": "JohnyCrypto",
                 "position": "Media Designer",
+                "photo": "/img/team/generic.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "NextPLK",
+                "position": "Community Discord Manager",
+                "photo": "/img/team/generic.png",
+                "social": {
+                    "twitter": "",
+                    "linkedin": ""
+                }
+            },
+            {
+                "name": "iBerry240",
+                "position": "Bot Developer",
                 "photo": "/img/team/generic.png",
                 "social": {
                     "twitter": "",
