@@ -13,7 +13,7 @@
             "src": "/img/illustrations/phone-wallet.svg",
             "alt": ""
         },
-        "button": [
+        "button": 
         {
             "label": "LightPaper",
             "icon": "newspaper",
@@ -24,7 +24,7 @@
             "icon": "newspaper",
             "url": "/docs/roadmap.svg"
         }
-    ],
+    },
     "features": [
         {
             "title": "Wallet Transactions",
