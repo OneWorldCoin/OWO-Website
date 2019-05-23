@@ -27,17 +27,17 @@
                     {
                         "label": "Mac Os",
                         "icon": "apple",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-mac.zip"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/OneWorld-Qt_Mac_Classic.zip"
                     },
                     {
                         "label": "Linux",
                         "icon": "tux",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-lin.zip"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/oneworld-qt_Linux.zip"
                     },
                     {
                         "label": "Windows",
                         "icon": "windows",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/initial/owo-win.zip"
+                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/oneworld-qt_win_classic.exe.zip"
                     }
                 ]
             },
@@ -60,6 +60,11 @@
                         "label": "One World Masternode Setup Guide",
                         "icon": "owo",
                         "url": "https://github.com/OneWorldCoin/MN"
+                    },
+                    {
+                        "label": "One World Bootstrap Guide",
+                        "icon": "owo",
+                        "url": "https://github.com/OneWorldCoin/Bootstrap"
                     }
                 ]
             },
@@ -71,7 +76,12 @@
                         "label": "Bitcoin Talk Announcement",
                         "icon": "bookmark",
                         "url": "https://rebrand.ly/OWO_BitCoinTalk"
-                    }
+                    },
+                    {
+                        "label": "Medium",
+                        "icon": "bookmark",
+                        "url": "https://medium.com/@oneworldcoin"
+                    },
                 ]
             }
         ]
