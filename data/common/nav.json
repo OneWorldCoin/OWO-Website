@@ -46,11 +46,6 @@
                 "icon": "search",
                 "items": [
                     {
-                        "label": "OWO",
-                        "icon": "owo",
-                        "url": "https://owo.exp.monitorit4.me/"
-                    },
-                    {
                         "label": "OWO Mobile",
                         "icon": "owo",
                         "url": "https://owo.ccore.online/"
@@ -88,6 +83,11 @@
                 "name": "crex24",
                 "url": "https://crex24.com/exchange/OWO-BTC",
                 "logo": "/img/sellers/crex24.svg"
+            },
+            {
+                "name": "stex",
+                "url": "https://app.stex.com/en/basic-trade/pair/BTC/OWO",
+                "logo": "/img/sellers/stex.svg"
             },
             {
                 "name": "midex",
