@@ -53,6 +53,17 @@
                 ]
             },
             {
+                "label": "Roadmap",
+                "icon": "file",
+                "items": [
+                    {
+                        "label": "One World Roadmap",
+                        "icon": "owo",
+                        "url": "/docs/roadmap.svg"
+                    }
+                ]
+            },
+            {
                 "label": "Guides",
                 "icon": "book",
                 "items": [
