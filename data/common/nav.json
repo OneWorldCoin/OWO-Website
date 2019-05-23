@@ -42,6 +42,23 @@
                 ]
             },
             {
+                "label": "Guides",
+                "icon": "book",
+                "items": [
+                    {
+                        "label": "One World Masternode Setup Guide",
+                        "icon": "owo",
+                        "url": "https://github.com/OneWorldCoin/MN"
+                    },
+                    {
+                        "label": "One World Bootstrap Guide",
+                        "icon": "owo",
+                        "url": "https://github.com/OneWorldCoin/Bootstrap"
+                    }
+                ]
+            },
+
+            {
                 "label": "Block explorers",
                 "icon": "search",
                 "items": [
@@ -63,22 +80,7 @@
                     }
                 ]
             },
-            {
-                "label": "Guides",
-                "icon": "book",
-                "items": [
-                    {
-                        "label": "One World Masternode Setup Guide",
-                        "icon": "owo",
-                        "url": "https://github.com/OneWorldCoin/MN"
-                    },
-                    {
-                        "label": "One World Bootstrap Guide",
-                        "icon": "owo",
-                        "url": "https://github.com/OneWorldCoin/Bootstrap"
-                    }
-                ]
-            },
+            
             {
                 "label": "News",
                 "icon": "newspaper",
