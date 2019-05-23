@@ -17,7 +17,8 @@
             "label": "LightPaper",
             "icon": "newspaper",
             "url": "/docs/Lightpaper.pdf"
-        
+        },
+        {
             "label": "Roadmap",
             "icon": "newspaper",
             "url": "/docs/roadmap.svg"
