@@ -13,7 +13,8 @@
             "src": "/img/illustrations/phone-wallet.svg",
             "alt": ""
         },
-        "button":{
+        "button":[
+            {
             "label": "LightPaper",
             "icon": "newspaper",
             "url": "/docs/Lightpaper.pdf"
@@ -23,6 +24,7 @@
             "icon": "newspaper",
             "url": "/docs/roadmap.svg"
         }
+        ]
     },
     "features": [
         {
