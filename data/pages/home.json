@@ -179,19 +179,29 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "/img/partners/cfl.png",
-                "name": "CryptoFlow",
-                "url": "https://cryptoflow.co.uk"
-            },
-            {
-                "logo": "/img/partners/beacon.png",
-                "name": "Beacon",
-                "url": "https://beaconcrypto.org/"
-            },
-            {
-                "logo": "/img/partners/spp.png",
+                "logo": "/img/partners/spp_.png",
                 "name": "Simple POS Pool",
                 "url": "https://simplepospool.com/"
+            },
+            {
+                "logo": "/img/partners/Midas.svg",
+                "name": "Midas",
+                "url": "https://midas.investments/"
+            },
+            {
+                "logo": "/img/partners/snode.svg",
+                "name": "Snode",
+                "url": "https://snode.co/"
+            },
+            {
+                "logo": "/img/partners/trtt.svg",
+                "name": "trttNodes",
+                "url": "https://node.trittium.cc/"
+            },
+            {
+                "logo": "/img/partners/nodehub.svg",
+                "name": "NodeHUb",
+                "url": "https://nodehub.io/"
             }
         ]
     },
