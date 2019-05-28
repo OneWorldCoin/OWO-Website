@@ -179,27 +179,27 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "/img/partners/cfl.png",
+                "logo": "/img/partners/spp2.png",
                 "name": "Simple POS Pool",
                 "url": "https://simplepospool.com/"
             },
             {
-                "logo": "/img/partners/Midas.svg",
+                "logo": "/img/partners/Midas.png",
                 "name": "Midas",
                 "url": "https://midas.investments/"
             },
             {
-                "logo": "/img/partners/snode.svg",
+                "logo": "/img/partners/snode.png",
                 "name": "Snode",
                 "url": "https://snode.co/"
             },
             {
-                "logo": "/img/partners/trtt.svg",
+                "logo": "/img/partners/trtt.png",
                 "name": "trttNodes",
                 "url": "https://node.trittium.cc/"
             },
             {
-                "logo": "/img/partners/nodehub.svg",
+                "logo": "/img/partners/nodehub.png",
                 "name": "NodeHUb",
                 "url": "https://nodehub.io/"
             }
