@@ -179,7 +179,7 @@
         "header": "Partners",
         "items": [
             {
-                "logo": "/img/partners/spp2.png",
+                "logo": "/img/partners/spp2.svg",
                 "name": "Simple POS Pool",
                 "url": "https://simplepospool.com/"
             },
