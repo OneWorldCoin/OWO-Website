@@ -59,11 +59,11 @@
                 }
             },
             {
-                "name": "Pedro Lobo (aka CryptoMekanics)",
+                "name": "Pedro Diogo",
                 "position": "Technical Advisor",
-                "photo": "/img/team/lobo.png",
+                "photo": "/img/team/generic.png",
                 "social": {
-                    "twitter": "https://twitter.com/cryptomekanics",
+                    "twitter": "",
                     "linkedin": ""
                 }
             },
