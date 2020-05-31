@@ -27,17 +27,17 @@
                     {
                         "label": "Mac Os",
                         "icon": "apple",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/OneWorld-Qt_Mac_Classic.zip"
+                        "url": "https://github.com/OneWorldCoin/OneWorld/releases/download/v3.0.0/OneWorld_v3.0_OSX.zip"
                     },
                     {
                         "label": "Linux",
                         "icon": "tux",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/oneworld-qt_Linux.zip"
+                        "url": "https://github.com/OneWorldCoin/OneWorld/releases/download/v3.0.0/OneWorld_v3.0_LINUX_qt.zip"
                     },
                     {
                         "label": "Windows",
                         "icon": "windows",
-                        "url": "https://github.com/OneWorldCoin/owo/releases/download/V2.0/oneworld-qt_win_classic.exe.zip"
+                        "url": "https://github.com/OneWorldCoin/OneWorld/releases/download/v3.0.0/OneWorld_v3.0_WIN_64.zip"
                     }
                 ]
             },
@@ -119,7 +119,7 @@
             }
         ]
     },
-    "github": "https://github.com/OneWorldCoin/owo",
+    "github": "https://github.com/OneWorldCoin/OneWorld",
     "social": [
         {
             "icon": "facebook",
